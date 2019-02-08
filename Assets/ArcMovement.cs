@@ -46,7 +46,7 @@ public class ArcMovement : MonoBehaviour
             thunderBolt.transform.localScale += ChargeBolt();
             Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
             boltRB.velocity = BallisticVel(targetObj, shootAngle);
-            boltEnergyscript.energyLevel() += energyLevel;
+            //boltEnergyscript.energyLevel() += energyLevel;
             sizeIncrement = Vector3.zero;
             ballCharge = 0;
             
