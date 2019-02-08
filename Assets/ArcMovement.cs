@@ -14,22 +14,43 @@ public class ArcMovement : MonoBehaviour
     public Vector3 targetObj;
     public float shootAngle;
     public float bolfSpeed;
+
+    private float ballCharge = 0;
+
+    private Vector3 sizeIncrement;
+
+    private float energyLevel;
+
+    public Energy boltEnergyscript;
     
     // Start is called before the first frame update
     void Start()
     {
-       
+        energyLevel = Random.Range(10, 100);
     }
 
     // Update is called once per frame
     void Update()
     {
+        print(energyLevel);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            ChargeBolt();
+
+        }
+       
+        
         if (Input.GetKeyUp(KeyCode.Space))
         {
             GameObject thunderBolt = Instantiate(projectile, transform.position, Quaternion.identity);
+            thunderBolt.transform.localScale += ChargeBolt();
             Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
             boltRB.velocity = BallisticVel(targetObj, shootAngle);
+            //boltEnergyscript.energyLevel() += energyLevel;
+            sizeIncrement = Vector3.zero;
+            ballCharge = 0;
             
+
 
         }
         if (Input.GetMouseButtonDown(0))
@@ -46,10 +67,20 @@ public class ArcMovement : MonoBehaviour
         }
     
         
-        
+       
         
     }
 
+
+
+    public Vector3 ChargeBolt()
+    {
+        ballCharge += 1 / 10f;
+        energyLevel -= 1 / 10f;
+        sizeIncrement = new Vector3(ballCharge,ballCharge,ballCharge);
+        return sizeIncrement;
+    }
+    
 
     public Vector3 BallisticVel(Vector3 target, float angle)
     {
