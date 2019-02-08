@@ -18,25 +18,53 @@ public class Movement : MonoBehaviour
 
     void Update ()
     {
-        if (Input.GetKeyDown (KeyCode.W) && canMove && gridX != 0)
+       // Debug.DrawRay(transform.position, (transform.forward - transform.up).normalized * 1, Color.yellow);
+       // Debug.DrawRay(transform.position, (-transform.forward - transform.up).normalized * 1, Color.yellow);
+       // Debug.DrawRay(transform.position, (transform.right - transform.up).normalized * 1, Color.yellow);
+       // Debug.DrawRay(transform.position, (-transform.right - transform.up).normalized * 1, Color.yellow);
+
+        if (Input.GetKeyDown (KeyCode.W) && canMove)
         {
-            transform.Translate(Vector3.left * speed);
-            gridX += 1;
+            RaycastHit hit;
+
+
+
+            if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 1))
+            {
+                transform.Translate(Vector3.left * speed);
+                gridX += 1;
+            }
         }
-        if (Input.GetKeyDown (KeyCode.A) && canMove && gridY != 0)
+        if (Input.GetKeyDown (KeyCode.A) && canMove)
         {
-            transform.Translate(Vector3.back * speed);
-            gridY += 1;
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 1))
+            {
+                transform.Translate(Vector3.back * speed);
+                gridY += 1;
+            }
+            
         }
-        if (Input.GetKeyDown (KeyCode.S) && canMove && gridX != -4)
+        if (Input.GetKeyDown (KeyCode.S) && canMove)
         {
-            transform.Translate(Vector3.right * speed);
-            gridX -= 1;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 1))
+            {
+                transform.Translate(Vector3.right * speed);
+                gridX -= 1;
+            }
+            
         }
-        if (Input.GetKeyDown (KeyCode.D) && canMove && gridY != -4)
+        if (Input.GetKeyDown (KeyCode.D) && canMove)
         {
-            transform.Translate(Vector3.forward * speed);
-            gridY -= 1;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 1))
+            {
+                transform.Translate(Vector3.forward * speed);
+                gridY -= 1;
+            }
+           
         }
 
     }
