@@ -16,6 +16,7 @@ public class ArcMovement : MonoBehaviour
     public float bolfSpeed;
 
     private float ballCharge = 0;
+    public float chargeSpeed;
 
     private Vector3 sizeIncrement;
 
@@ -43,7 +44,7 @@ public class ArcMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             GameObject thunderBolt = Instantiate(projectile, transform.position, Quaternion.identity);
-            thunderBolt.transform.localScale += ChargeBolt();
+            //thunderBolt.transform.localScale += ChargeBolt();
             Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
             boltRB.velocity = BallisticVel(targetObj, shootAngle);
             //boltEnergyscript.energyLevel() += energyLevel;
@@ -86,9 +87,9 @@ public class ArcMovement : MonoBehaviour
 
     public Vector3 ChargeBolt()
     {
-        
-        ballCharge += 1 / 10f;
-        energyLevel -= 1 / 10f;
+        if(ballCharge < .99f)
+        ballCharge += (1/chargeSpeed) * Time.deltaTime;
+        energyLevel -= (1 / chargeSpeed) * Time.deltaTime;
         sizeIncrement = new Vector3(ballCharge,ballCharge,ballCharge);
         return sizeIncrement;
     }
