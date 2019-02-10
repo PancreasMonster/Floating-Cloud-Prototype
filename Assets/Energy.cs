@@ -5,7 +5,8 @@ using UnityEngine;
 public class Energy : MonoBehaviour
 {
 
-    public float energy, maxEnergy, energyRecharge; 
+    public float energy, maxEnergy, energyRecharge;
+    bool dead;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,11 @@ public class Energy : MonoBehaviour
 
       if (energy <= 0)
         {
-            gameObject.AddComponent<Rigidbody>();
+            if (!dead)
+            {
+                gameObject.AddComponent<Rigidbody>();
+                dead = true;
+            }
             Destroy(this.gameObject, 4);
         }
     }
