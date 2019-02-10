@@ -48,6 +48,14 @@ public class ArcMovement : MonoBehaviour
             boltRB.velocity = BallisticVel(targetObj, shootAngle);
             //boltEnergyscript.energyLevel() += energyLevel;
             EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+            RaycastHit checkTile;
+
+            if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1))
+            {
+                GameObject tileBelow = checkTile.transform.gameObject;
+                tileBelow.GetComponent<Energy>().energyLevel(ballCharge);
+            }
+            
             EH.EnergyLevel(ballCharge);
 
             sizeIncrement = Vector3.zero;
@@ -78,6 +86,7 @@ public class ArcMovement : MonoBehaviour
 
     public Vector3 ChargeBolt()
     {
+        
         ballCharge += 1 / 10f;
         energyLevel -= 1 / 10f;
         sizeIncrement = new Vector3(ballCharge,ballCharge,ballCharge);

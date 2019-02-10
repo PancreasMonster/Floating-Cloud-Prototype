@@ -37,9 +37,8 @@ public class Energy : MonoBehaviour
         }
     }
 
-    public float energyLevel()
+    public void energyLevel(float amount)
     {
-        return 0;
-
+        energy -= amount;
     }
 }
