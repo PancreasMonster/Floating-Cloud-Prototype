@@ -16,7 +16,7 @@ public class ArcMovement : MonoBehaviour
     public float bolfSpeed;
 
     private float ballCharge = 0;
-    public float chargeSpeed;
+    public float chargeSpeed = 5;
 
     private Vector3 sizeIncrement;
 
@@ -54,10 +54,13 @@ public class ArcMovement : MonoBehaviour
             if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1))
             {
                 GameObject tileBelow = checkTile.transform.gameObject;
+                float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
                 tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+                
+                EH.EnergyLevel(energyDrained);
             }
             
-            EH.EnergyLevel(ballCharge);
+            
 
             sizeIncrement = Vector3.zero;
             ballCharge = 0;
@@ -87,13 +90,13 @@ public class ArcMovement : MonoBehaviour
 
     public Vector3 ChargeBolt()
     {
-        //if (ballCharge < .99f)
-       // {
+        if (ballCharge < .99f)
+        {
             ballCharge += (1 / chargeSpeed) * Time.deltaTime;
             energyLevel -= (1 / chargeSpeed) * Time.deltaTime;
             sizeIncrement = new Vector3(ballCharge, ballCharge, ballCharge);
            
-        //}
+        }
         return sizeIncrement;
     }
     

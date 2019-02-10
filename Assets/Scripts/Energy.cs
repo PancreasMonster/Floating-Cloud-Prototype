@@ -48,7 +48,7 @@ public class Energy : MonoBehaviour
 
     public void drainEnergy (float amount)
     {
-        float reduction = amount * energy;
+        float reduction = Mathf.Floor(amount * energy);
         energy -= reduction;
         Debug.Log(reduction);
     } 
