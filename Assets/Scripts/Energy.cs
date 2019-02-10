@@ -7,7 +7,7 @@ public class Energy : MonoBehaviour
 {
 
     public float energy, maxEnergy, energyRecharge;
-    TextMesh text; 
+    TextMesh text;
     bool dead;
 
     // Start is called before the first frame update
@@ -19,16 +19,16 @@ public class Energy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (energy < maxEnergy)
+        if (energy < maxEnergy)
         {
             energy += energyRecharge * Time.deltaTime;
         }
-      if (energy > maxEnergy)
+        if (energy > maxEnergy)
         {
             energy = maxEnergy;
         }
 
-      if (energy <= 0)
+        if (energy <= 0)
         {
             if (!dead)
             {
@@ -46,5 +46,10 @@ public class Energy : MonoBehaviour
         energy -= amount;
     }
 
-    
+    public void drainEnergy (float amount)
+    {
+        float reduction = Mathf.Floor(amount * energy);
+        energy -= reduction;
+
+    } 
 }
