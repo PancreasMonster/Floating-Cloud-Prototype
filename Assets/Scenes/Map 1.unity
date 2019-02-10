@@ -351,13 +351,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230509608}
-  m_LocalRotation: {x: 0.17789274, y: 0.2344967, z: -0.04369452, w: 0.9547022}
-  m_LocalPosition: {x: 3.1, y: 5.92, z: -9}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5.94, y: 5.92, z: -2.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 21.11, y: 27.6, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1591588273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -425,82 +425,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5603832932284292699, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832932284611257, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832932309311197, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832932453302606, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832932555733329, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832932561628404, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832932845111674, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
     - target: {fileID: 5603832932891696766, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933032873442, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933136561995, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933159063080, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933262972153, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933320176372, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933322512485, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933378566482, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933608485942, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -510,22 +435,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
-    - target: {fileID: 5603832933624099291, guid: 6c099581bd60b3249a78c9e869a62b2b,
+    - target: {fileID: 5603832933032873442, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
-    - target: {fileID: 5603832933785239170, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832933792972238, guid: 6c099581bd60b3249a78c9e869a62b2b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5603832934014591154, guid: 6c099581bd60b3249a78c9e869a62b2b,
+    - target: {fileID: 5603832933608485942, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
       propertyPath: m_TagString
       value: Tile
@@ -540,12 +455,97 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
-    - target: {fileID: 5603832934090913158, guid: 6c099581bd60b3249a78c9e869a62b2b,
+    - target: {fileID: 5603832932453302606, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832932284292699, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933624099291, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
     - target: {fileID: 5603832934162594591, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933159063080, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933322512485, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933136561995, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933262972153, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832932561628404, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933378566482, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832932309311197, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832934014591154, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832934090913158, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933785239170, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832932845111674, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933320176372, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933792972238, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832932284611257, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832932555733329, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
       propertyPath: m_TagString
       value: Tile

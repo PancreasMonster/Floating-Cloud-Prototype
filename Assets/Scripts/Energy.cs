@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Energy : MonoBehaviour
 {
 
     public float energy, maxEnergy, energyRecharge;
+    TextMesh text; 
     bool dead;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        text = GetComponentInChildren<TextMesh>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,8 @@ public class Energy : MonoBehaviour
             }
             Destroy(this.gameObject, 4);
         }
+
+        text.text = energy.ToString();
     }
 
     public void energyLevel(float amount)
