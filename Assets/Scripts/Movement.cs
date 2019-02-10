@@ -5,10 +5,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 2.5f;
-    public bool canMove, dead;
+    public bool canMove, dead, player1, player2;
     public int gridX, gridY;
     Vector3 pos;
     Transform tr;
+    public bool X_isAxisInUse = false, Y_isAxisInUse = false;
 
     void Start()
     {
@@ -37,50 +38,114 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown (KeyCode.W) && canMove)
+        if (player1)
         {
-            RaycastHit hit;
-
-
-
-            if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 1))
+            if (Input.GetKeyDown(KeyCode.W) && canMove)
             {
-                transform.Translate(Vector3.left * speed);
-                gridX += 1;
+                RaycastHit hit;
+
+
+
+                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.left * speed);
+                    gridX += 1;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.A) && canMove)
+            {
+                RaycastHit hit;
+
+                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.back * speed);
+                    gridY += 1;
+                }
+
+            }
+            if (Input.GetKeyDown(KeyCode.S) && canMove)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.right * speed);
+                    gridX -= 1;
+                }
+
+            }
+            if (Input.GetKeyDown(KeyCode.D) && canMove)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.forward * speed);
+                    gridY -= 1;
+                }
+
             }
         }
-        if (Input.GetKeyDown (KeyCode.A) && canMove)
-        {
-            RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 1))
-            {
-                transform.Translate(Vector3.back * speed);
-                gridY += 1;
-            }
-            
-        }
-        if (Input.GetKeyDown (KeyCode.S) && canMove)
+        if (player2)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 1))
-            {
-                transform.Translate(Vector3.right * speed);
-                gridX -= 1;
-            }
-            
-        }
-        if (Input.GetKeyDown (KeyCode.D) && canMove)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 1))
-            {
-                transform.Translate(Vector3.forward * speed);
-                gridY -= 1;
-            }
-           
-        }
+            Debug.Log(Input.GetAxis("BiggerBenjamin"));
 
+            if (Input.GetAxisRaw ("BigBob") == -1 && canMove && X_isAxisInUse == false)
+            {
+                
+
+                X_isAxisInUse = true;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.left * speed);
+                    gridX += 1;
+                }
+            }
+            if (Input.GetAxisRaw("BiggerBenjamin") == -1 && canMove && Y_isAxisInUse == false)
+            {
+                Y_isAxisInUse = true;
+                RaycastHit hit;
+
+                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.back * speed);
+                    gridY += 1;
+                }
+
+            }
+            if (Input.GetAxisRaw("BigBob") == 1 && canMove && X_isAxisInUse == false)
+            {
+                X_isAxisInUse = true;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.right * speed);
+                    gridX -= 1;
+                }
+
+            }
+            if (Input.GetAxisRaw("BiggerBenjamin") == 1 && canMove && Y_isAxisInUse == false)
+            {
+                Y_isAxisInUse = true;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 1))
+                {
+                    transform.Translate(Vector3.forward * speed);
+                    gridY -= 1;
+                }
+
+            }
+
+            if (Input.GetAxisRaw("BigBob") == 0)
+            {
+                X_isAxisInUse = false;
+            }
+
+            if (Input.GetAxisRaw("BiggerBenjamin") == 0)
+            {
+                Y_isAxisInUse = false;
+            }
+        }
     }
 
     void FixedUpdate()

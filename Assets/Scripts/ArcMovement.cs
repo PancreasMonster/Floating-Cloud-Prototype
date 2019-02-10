@@ -33,7 +33,7 @@ public class ArcMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(energyLevel);
+       // print(energyLevel);
         if (Input.GetKey(KeyCode.Space))
         {
             ChargeBolt();
