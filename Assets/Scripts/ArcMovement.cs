@@ -54,7 +54,7 @@ public class ArcMovement : MonoBehaviour
             if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1))
             {
                 GameObject tileBelow = checkTile.transform.gameObject;
-                tileBelow.GetComponent<Energy>().energyLevel(ballCharge);
+                tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
             }
             
             EH.EnergyLevel(ballCharge);
@@ -87,10 +87,13 @@ public class ArcMovement : MonoBehaviour
 
     public Vector3 ChargeBolt()
     {
-        if(ballCharge < .99f)
-        ballCharge += (1/chargeSpeed) * Time.deltaTime;
-        energyLevel -= (1 / chargeSpeed) * Time.deltaTime;
-        sizeIncrement = new Vector3(ballCharge,ballCharge,ballCharge);
+        //if (ballCharge < .99f)
+       // {
+            ballCharge += (1 / chargeSpeed) * Time.deltaTime;
+            energyLevel -= (1 / chargeSpeed) * Time.deltaTime;
+            sizeIncrement = new Vector3(ballCharge, ballCharge, ballCharge);
+           
+        //}
         return sizeIncrement;
     }
     
