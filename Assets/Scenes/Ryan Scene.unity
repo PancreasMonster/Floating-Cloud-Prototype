@@ -944,9 +944,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &253167577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,9 +1051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &278110138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,9 +1227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &290136239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,9 +1698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &398227274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,9 +2078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &488305168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,9 +2276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &494086986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,9 +2474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &543270062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,9 +2845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &585059247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,9 +2952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &586171425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,9 +3296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &677689203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,9 +3403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &701304336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,9 +3510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &727829191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,9 +3981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &775686798
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,9 +4689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &884787328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,9 +4796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &900599149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4903,9 +4903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &935235658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,9 +6029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1218804844
 GameObject:
   m_ObjectHideFlags: 0
@@ -6864,9 +6864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1418902434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8043,9 +8043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1686488034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8150,9 +8150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1727569603
 GameObject:
   m_ObjectHideFlags: 0
@@ -8348,9 +8348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1760404727
 GameObject:
   m_ObjectHideFlags: 0
@@ -8910,9 +8910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1953415178
 GameObject:
   m_ObjectHideFlags: 0
@@ -9017,9 +9017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
 --- !u!1 &1953677897
 GameObject:
   m_ObjectHideFlags: 0
@@ -10089,6 +10089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  maxEnergy: 0
-  energyRecharge: 0
+  energy: 10
+  maxEnergy: 50
+  energyRecharge: 5
