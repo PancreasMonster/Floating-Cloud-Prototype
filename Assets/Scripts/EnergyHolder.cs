@@ -22,4 +22,13 @@ public class EnergyHolder : MonoBehaviour
     {
         energyLevel = amount;
     }
+    
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Tile"))
+        {
+           col.gameObject.GetComponent<Energy>().energyLevel(energyLevel);
+            
+        }
+    }
 }

@@ -45,4 +45,6 @@ public class Energy : MonoBehaviour
     {
         energy -= amount;
     }
+
+    
 }
