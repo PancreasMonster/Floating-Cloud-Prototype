@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 2.5f;
-    public bool canMove;
+    public bool canMove, dead;
     public int gridX, gridY;
     Vector3 pos;
     Transform tr;
@@ -18,10 +18,24 @@ public class Movement : MonoBehaviour
 
     void Update ()
     {
-       // Debug.DrawRay(transform.position, (transform.forward - transform.up).normalized * 1, Color.yellow);
-       // Debug.DrawRay(transform.position, (-transform.forward - transform.up).normalized * 1, Color.yellow);
-       // Debug.DrawRay(transform.position, (transform.right - transform.up).normalized * 1, Color.yellow);
-       // Debug.DrawRay(transform.position, (-transform.right - transform.up).normalized * 1, Color.yellow);
+        // Debug.DrawRay(transform.position, (transform.forward - transform.up).normalized * 1, Color.yellow);
+        // Debug.DrawRay(transform.position, (-transform.forward - transform.up).normalized * 1, Color.yellow);
+        // Debug.DrawRay(transform.position, (transform.right - transform.up).normalized * 1, Color.yellow);
+        // Debug.DrawRay(transform.position, (-transform.right - transform.up).normalized * 1, Color.yellow);
+
+        RaycastHit checkTile;
+
+        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1)) {
+
+        }
+        else
+        {
+            if (!dead)
+            {
+                gameObject.AddComponent<Rigidbody>();
+                dead = true;
+            }
+        }
 
         if (Input.GetKeyDown (KeyCode.W) && canMove)
         {
