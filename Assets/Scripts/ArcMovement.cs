@@ -47,10 +47,13 @@ public class ArcMovement : MonoBehaviour
             Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
             boltRB.velocity = BallisticVel(targetObj, shootAngle);
             //boltEnergyscript.energyLevel() += energyLevel;
+            EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+            EH.EnergyLevel(ballCharge);
+
             sizeIncrement = Vector3.zero;
             ballCharge = 0;
-            
 
+            
 
         }
         if (Input.GetMouseButtonDown(0))
