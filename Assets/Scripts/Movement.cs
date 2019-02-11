@@ -87,7 +87,7 @@ public class Movement : MonoBehaviour
 
         if (player2)
         {
-            Debug.Log(Input.GetAxis("BiggerBenjamin"));
+            //Debug.Log(Input.GetAxis("BiggerBenjamin"));
 
             if (Input.GetAxisRaw ("BigBob") == -1 && canMove && X_isAxisInUse == false)
             {

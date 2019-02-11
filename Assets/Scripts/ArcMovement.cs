@@ -97,28 +97,32 @@ public class ArcMovement : MonoBehaviour
 
         if (player2)
         {
-            if (Input.GetKey(KeyCode.RightArrow))                //Change to controller x axis
+           // Debug.Log("X: " + Input.GetAxis("ControllerX"));
+           // Debug.Log("Y: " + Input.GetAxis("ControllerY"));
+            var deadzone = 0.1f;
+            
+            if (Input.GetAxis("ControllerX") >= deadzone)              //Change to controller x axis
             {
                 cursor.transform.position += Vector3.right;
 
 
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))                 //Change to controller x axis
+            if (Input.GetAxis("ControllerX") <= -deadzone)                //Change to controller x axis
             {
                 cursor.transform.position -= Vector3.right;
 
 
             }
 
-            if (Input.GetKey(KeyCode.UpArrow))                     //Change to controller y axis
+            if (Input.GetAxis("ControllerY") <= -deadzone)                     //Change to controller y axis
             {
                 cursor.transform.position += Vector3.up;
 
 
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))                     //Change to controller y axis
+            if (Input.GetAxis("ControllerY") >= deadzone)                     //Change to controller y axis
             {
                 cursor.transform.position -= Vector3.up;
 
@@ -135,12 +139,32 @@ public class ArcMovement : MonoBehaviour
 
                 if (hit2.transform.tag == "Player1Tile")
                 {
-                    if (Input.GetKeyDown(KeyCode.KeypadEnter))            //Change to controller right trigger
+                    if (Input.GetButtonDown("Fire1")) //Change to controller right trigger
                     {
                         print("Tile Selected");
                         targetObj = hit2.transform.gameObject.transform.position;
-                    }
 
+                        GameObject thunderBolt = Instantiate(projectile, transform.position, Quaternion.identity);
+                        //thunderBolt.transform.localScale += ChargeBolt();
+                        Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
+                        boltRB.velocity = BallisticVel(targetObj, shootAngle);
+                        //boltEnergyscript.energyLevel() += energyLevel;
+                        EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+                        RaycastHit checkTile;
+
+                        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1))
+                        {
+                            GameObject tileBelow = checkTile.transform.gameObject;
+                            float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
+                            tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+
+                            EH.EnergyLevel(energyDrained);
+                        }
+
+                        sizeIncrement = Vector3.zero;
+                        ballCharge = 0;
+
+                    }
                 }
             }
         }
