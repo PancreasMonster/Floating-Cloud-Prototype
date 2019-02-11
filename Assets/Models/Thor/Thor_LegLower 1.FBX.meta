@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 615ee843614cb3f42b1c3adf6bd55061
+guid: 82e73ec13dbadf84b8c996b800042685
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 08 - Default
+    2100000: 03 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Pauldron_Thor
+    4300000: LowerLeg
   externalObjects: {}
   materials:
     importMaterials: 1

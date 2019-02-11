@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2da609a8ed02f694fb89cfdccc9dfbdf
+guid: fd9d5b8f822d4534d9dfe8d6ecefeed2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: 08 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: KneeGuard_Thor
+    4300000: Foot
   externalObjects: {}
   materials:
     importMaterials: 1

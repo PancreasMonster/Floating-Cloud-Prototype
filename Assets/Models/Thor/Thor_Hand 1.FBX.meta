@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 38509e32ff837df4b85ed47d6c6c8fb1
+guid: d5063f69c11615d468b440bd6db80c2b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 08 - Default
+    2100000: 09 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Foot
+    4300000: Hand
   externalObjects: {}
   materials:
     importMaterials: 1

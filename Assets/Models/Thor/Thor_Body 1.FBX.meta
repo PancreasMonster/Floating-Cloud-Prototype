@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 7bd0e564a89c91f4d92fdf9f35217fe7
+guid: 82da933d6809a4e4ca4c38e6a6a79588
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 08 - Default
+    2100000: 07 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Belt_Thor
+    4300000: Torso
   externalObjects: {}
   materials:
     importMaterials: 1

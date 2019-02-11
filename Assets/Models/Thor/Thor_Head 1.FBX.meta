@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: a453da402b5116c4087074bd757d9e15
+guid: 6d1de47287259b044a4cc98a38b69f36
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 03 - Default
+    2100000: 09 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: LowerLeg
+    4300000: Head_Thor
   externalObjects: {}
   materials:
     importMaterials: 1
