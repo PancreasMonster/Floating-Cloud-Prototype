@@ -97,28 +97,28 @@ public class ArcMovement : MonoBehaviour
 
         if (player2)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))                //Change to controller x axis
             {
                 cursor.transform.position += Vector3.right;
 
 
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow))                 //Change to controller x axis
             {
                 cursor.transform.position -= Vector3.right;
 
 
             }
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow))                     //Change to controller y axis
             {
                 cursor.transform.position += Vector3.up;
 
 
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow))                     //Change to controller y axis
             {
                 cursor.transform.position -= Vector3.up;
 
@@ -135,7 +135,7 @@ public class ArcMovement : MonoBehaviour
 
                 if (hit2.transform.tag == "Player1Tile")
                 {
-                    if (Input.GetKeyDown(KeyCode.KeypadEnter))
+                    if (Input.GetKeyDown(KeyCode.KeypadEnter))            //Change to controller right trigger
                     {
                         print("Tile Selected");
                         targetObj = hit2.transform.gameObject.transform.position;
