@@ -58,7 +58,7 @@ public class ArcMovement : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                Vector3 CubeHeight = new Vector3(0, -1f, 0); 
+                Vector3 CubeHeight = new Vector3(0, -0.5f, 0); 
                 GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight , Quaternion.identity);
                 //thunderBolt.transform.localScale += ChargeBolt();
                 Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
