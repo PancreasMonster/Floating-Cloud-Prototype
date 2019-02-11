@@ -36,6 +36,8 @@ public class ArcMovement : MonoBehaviour
     public Image cursor;
 
     public float controllerSensitivity;
+
+    public LayerMask layer;
     
     // Start is called before the first frame update
     void Start()
@@ -67,8 +69,9 @@ public class ArcMovement : MonoBehaviour
                 EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
                 RaycastHit checkTile;
 
-                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1))
+                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
                 {
+                    Debug.Log(checkTile.transform.name);
                     GameObject tileBelow = checkTile.transform.gameObject;
                     float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
                     tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
@@ -163,16 +166,19 @@ public class ArcMovement : MonoBehaviour
 
                         GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
                         //thunderBolt.transform.localScale += ChargeBolt();
+                        thunderBolt.gameObject.layer = 4;
                         Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
                         boltRB.velocity = BallisticVel(targetObj, shootAngle);
                         //boltEnergyscript.energyLevel() += energyLevel;
                         EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
                         RaycastHit checkTile;
 
-                        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1))
+                        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
                         {
+                            Debug.Log(checkTile.transform.name);
                             GameObject tileBelow = checkTile.transform.gameObject;
                             float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
+                            
                             tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
 
                             EH.EnergyLevel(energyDrained);

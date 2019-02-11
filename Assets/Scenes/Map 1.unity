@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,6 +217,9 @@ MonoBehaviour:
   player2: 1
   cursor: {fileID: 866620049}
   controllerSensitivity: 3
+  layer:
+    serializedVersion: 2
+    m_Bits: 295
 --- !u!1 &620573025
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +465,9 @@ MonoBehaviour:
   player2: 0
   cursor: {fileID: 866620049}
   controllerSensitivity: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 295
 --- !u!1 &866620047
 GameObject:
   m_ObjectHideFlags: 0

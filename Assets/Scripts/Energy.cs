@@ -32,7 +32,7 @@ public class Energy : MonoBehaviour
         {
             if (!dead)
             {
-                //gameObject.AddComponent<Rigidbody>();
+                gameObject.AddComponent<Rigidbody>();
                 dead = true;
             }
             Destroy(this.gameObject, 4);
@@ -50,6 +50,6 @@ public class Energy : MonoBehaviour
     {
         float reduction = Mathf.Floor(amount * energy);
         energy -= reduction;
-        Debug.Log(reduction);
+        //Debug.Log(reduction);
     } 
 }
