@@ -141,6 +141,14 @@ public class ArcMovement : MonoBehaviour
 
                 if (hit2.transform.tag == "Player1Tile")
                 {
+
+                    if (Input.GetButtonDown("Fire1"))
+                    {
+                        ChargeBolt();
+
+                    }
+                    
+                    
                     if (Input.GetButtonDown("Fire1")) //Change to controller right trigger
                     {
                         print("Tile Selected");

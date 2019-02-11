@@ -32,7 +32,7 @@ public class Energy : MonoBehaviour
         {
             if (!dead)
             {
-                gameObject.AddComponent<Rigidbody>();
+                //gameObject.AddComponent<Rigidbody>();
                 dead = true;
             }
             Destroy(this.gameObject, 4);
