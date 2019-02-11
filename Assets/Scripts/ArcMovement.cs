@@ -91,7 +91,7 @@ public class ArcMovement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hitInfo = new RaycastHit();
-                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+                bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, layer);
                 if (hit)
                 {
                     if (hitInfo.transform.gameObject.tag == "Tile")

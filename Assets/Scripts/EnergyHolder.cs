@@ -28,7 +28,7 @@ public class EnergyHolder : MonoBehaviour
         if (col.gameObject.CompareTag("Tile"))
         {
            col.gameObject.GetComponent<Energy>().energyLevel(energyLevel);
-           Destroy(gameObject,0.1f);
+           Destroy(gameObject);
             
         }
     }

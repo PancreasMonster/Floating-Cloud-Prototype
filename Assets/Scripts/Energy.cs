@@ -14,6 +14,9 @@ public class Energy : MonoBehaviour
     void Start()
     {
         text = GetComponentInChildren<TextMesh>();
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.position = transform.position;
+        cube.gameObject.layer = 5;
     }
 
     // Update is called once per frame
@@ -38,7 +41,12 @@ public class Energy : MonoBehaviour
             Destroy(this.gameObject, 4);
         }
 
+        if (!dead)
         text.text = energy.ToString();
+        else
+        {
+            text.text = "";
+        }
     }
 
     public void energyLevel(float amount)
