@@ -31,6 +31,8 @@ public class ArcMovement : MonoBehaviour
     
 
     public Image cursor;
+
+    public float controllerSensitivity;
     
     // Start is called before the first frame update
     void Start()
@@ -103,28 +105,28 @@ public class ArcMovement : MonoBehaviour
             
             if (Input.GetAxis("ControllerX") >= deadzone)              //Change to controller x axis
             {
-                cursor.transform.position += Vector3.right;
+                cursor.transform.position += Vector3.right * controllerSensitivity;
 
 
             }
 
             if (Input.GetAxis("ControllerX") <= -deadzone)                //Change to controller x axis
             {
-                cursor.transform.position -= Vector3.right;
+                cursor.transform.position -= Vector3.right * controllerSensitivity;
 
 
             }
 
             if (Input.GetAxis("ControllerY") <= -deadzone)                     //Change to controller y axis
             {
-                cursor.transform.position += Vector3.up;
+                cursor.transform.position += Vector3.up * controllerSensitivity;
 
 
             }
 
             if (Input.GetAxis("ControllerY") >= deadzone)                     //Change to controller y axis
             {
-                cursor.transform.position -= Vector3.up;
+                cursor.transform.position -= Vector3.up * controllerSensitivity;
 
 
             }
