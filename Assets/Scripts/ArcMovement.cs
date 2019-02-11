@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
+using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
+using Vector3 = UnityEngine.Vector3;
 
 public class ArcMovement : MonoBehaviour
 {
@@ -55,7 +58,8 @@ public class ArcMovement : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                GameObject thunderBolt = Instantiate(projectile, transform.position, Quaternion.identity);
+                Vector3 CubeHeight = new Vector3(0, -1f, 0); 
+                GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight , Quaternion.identity);
                 //thunderBolt.transform.localScale += ChargeBolt();
                 Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
                 boltRB.velocity = BallisticVel(targetObj, shootAngle);
@@ -89,7 +93,8 @@ public class ArcMovement : MonoBehaviour
                 {
                     if (hitInfo.transform.gameObject.tag == "Tile")
                     {
-                        targetObj = hitInfo.transform.gameObject.transform.position;
+                        Vector3 temp = hitInfo.transform.gameObject.transform.position;
+                        targetObj = temp + new Vector3(0, 0f, 0);
                     }
                 }
             }
@@ -152,9 +157,11 @@ public class ArcMovement : MonoBehaviour
                     if (Input.GetButtonDown("Fire1")) //Change to controller right trigger
                     {
                         print("Tile Selected");
-                        targetObj = hit2.transform.gameObject.transform.position;
+                        Vector3 CubeHeight = new Vector3(0, -1f, 0);
+                        Vector3 temp = hit2.transform.gameObject.transform.position;
+                        targetObj = temp + new Vector3(0, 0f, 0);
 
-                        GameObject thunderBolt = Instantiate(projectile, transform.position, Quaternion.identity);
+                        GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
                         //thunderBolt.transform.localScale += ChargeBolt();
                         Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
                         boltRB.velocity = BallisticVel(targetObj, shootAngle);
