@@ -49,7 +49,7 @@ public class TargetMovement : MonoBehaviour
                 Debug.Log("Trigger");
 
 
-                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.left * speed);
                     gridX += 1;
@@ -59,7 +59,7 @@ public class TargetMovement : MonoBehaviour
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.back * speed);
                     gridY += 1;
@@ -69,7 +69,7 @@ public class TargetMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow) && canMove)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.right * speed);
                     gridX -= 1;
@@ -79,7 +79,7 @@ public class TargetMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow) && canMove)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.forward * speed);
                     gridY -= 1;
@@ -98,7 +98,7 @@ public class TargetMovement : MonoBehaviour
 
                 X_isAxisInUse = true;
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.left * speed);
                     gridX += 1;
@@ -109,7 +109,7 @@ public class TargetMovement : MonoBehaviour
                 Y_isAxisInUse = true;
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.back * speed);
                     gridY += 1;
@@ -120,7 +120,7 @@ public class TargetMovement : MonoBehaviour
             {
                 X_isAxisInUse = true;
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.right * speed);
                     gridX -= 1;
@@ -131,7 +131,7 @@ public class TargetMovement : MonoBehaviour
             {
                 Y_isAxisInUse = true;
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 1))
+                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3))
                 {
                     transform.Translate(Vector3.forward * speed);
                     gridY -= 1;
