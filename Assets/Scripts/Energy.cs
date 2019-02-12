@@ -47,7 +47,7 @@ public class Energy : MonoBehaviour
         {
             text.text = "";
         }
-        
+        //print(energy);
     }
 
     public void energyLevel(float amount)

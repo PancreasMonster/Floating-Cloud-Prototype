@@ -187,7 +187,7 @@ PrefabInstance:
     - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: player2
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
@@ -197,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: player1
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94080bea094d2ba498051208b7d6a691, type: 3}
@@ -228,8 +228,8 @@ MonoBehaviour:
   chargeSpeed: 5
   boltEnergyscript: {fileID: 3299457790704450615, guid: 5caefc70a5f996a4e9086961ee9f691d,
     type: 3}
-  player1: 0
-  player2: 1
+  player1: 1
+  player2: 0
   cursor: {fileID: 866620049}
   controllerSensitivity: 0
   layer:
@@ -271,8 +271,8 @@ MonoBehaviour:
   speed: 1.1
   canMove: 1
   dead: 0
-  player1: 1
-  player2: 0
+  player1: 0
+  player2: 1
   gridX: 0
   gridY: 0
   X_isAxisInUse: 0
@@ -554,17 +554,22 @@ PrefabInstance:
     - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: player2
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: player1
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: layer.m_Bits
       value: 279
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990446255898791803, guid: 94080bea094d2ba498051208b7d6a691,
+        type: 3}
+      propertyPath: dead
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94080bea094d2ba498051208b7d6a691, type: 3}
@@ -595,8 +600,8 @@ MonoBehaviour:
   chargeSpeed: 5
   boltEnergyscript: {fileID: 3299457790704450615, guid: 5caefc70a5f996a4e9086961ee9f691d,
     type: 3}
-  player1: 1
-  player2: 0
+  player1: 0
+  player2: 1
   cursor: {fileID: 866620049}
   controllerSensitivity: 0
   layer:
@@ -2108,8 +2113,8 @@ MonoBehaviour:
   speed: 1.1
   canMove: 1
   dead: 0
-  player1: 0
-  player2: 1
+  player1: 1
+  player2: 0
   gridX: 0
   gridY: 0
   X_isAxisInUse: 0

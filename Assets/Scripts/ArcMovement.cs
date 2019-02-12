@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
@@ -20,6 +21,8 @@ public class ArcMovement : MonoBehaviour
     public Vector3 targetObj;
     public float shootAngle;
     public float bolfSpeed;
+
+    private bool charging = false;
 
     private float ballCharge = 0;
     public float chargeSpeed = 5;
@@ -51,6 +54,7 @@ public class ArcMovement : MonoBehaviour
     void Update()
     {
         targetObj = targetObject.transform.position;
+        print((Input.GetAxis("Fire1")));
        // print(energyLevel);
         if (player1)
         {
@@ -156,45 +160,49 @@ public class ArcMovement : MonoBehaviour
                    
                 }
             }*/
-            if (Input.GetButton("Fire1"))
+            if (Input.GetAxis("Fire1")> 0)
             {
                 ChargeBolt();
-                      
+                charging = true;
 
             }
                     
                     
-            if (Input.GetButtonUp("Fire1")) //Change to controller right trigger
+            if (Input.GetAxis("Fire1")== 0) //Change to controller right trigger
             {
-                
-                
-                Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
-                //Vector3 temp = hit2.transform.gameObject.transform.position;
-                //targetObj = temp + new Vector3(0, 0f, 0);
 
-                GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
-                //thunderBolt.transform.localScale += ChargeBolt();
-                //thunderBolt.gameObject.layer = 4;
-                Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
-                boltRB.velocity = BallisticVel(targetObj, shootAngle);
-                //boltEnergyscript.energyLevel() += energyLevel;
-                EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
-                
-                RaycastHit checkTile;
-
-                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                if (charging)
                 {
-                    Debug.Log(checkTile.transform.name);
-                    GameObject tileBelow = checkTile.transform.gameObject;
-                    float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
-                            
-                    tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+                    Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
+                    //Vector3 temp = hit2.transform.gameObject.transform.position;
+                    //targetObj = temp + new Vector3(0, 0f, 0);
 
-                    EH.EnergyLevel(energyDrained);
+                    GameObject thunderBolt =
+                        Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
+                    //thunderBolt.transform.localScale += ChargeBolt();
+                    //thunderBolt.gameObject.layer = 4;
+                    Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
+                    boltRB.velocity = BallisticVel(targetObj, shootAngle);
+                    //boltEnergyscript.energyLevel() += energyLevel;
+                    EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+
+                    RaycastHit checkTile;
+
+                    if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                    {
+                        Debug.Log(checkTile.transform.name);
+                        GameObject tileBelow = checkTile.transform.gameObject;
+                        float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
+
+                        tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+
+                        EH.EnergyLevel(energyDrained);
+                    }
+
+                    sizeIncrement = Vector3.zero;
+                    ballCharge = 0;
+                    charging = false;
                 }
-
-                sizeIncrement = Vector3.zero;
-                ballCharge = 0;
 
             }
         }
