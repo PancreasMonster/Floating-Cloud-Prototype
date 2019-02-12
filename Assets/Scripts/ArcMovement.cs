@@ -43,6 +43,10 @@ public class ArcMovement : MonoBehaviour
     public LayerMask layer;
 
     public GameObject targetObject;
+
+    public Slider sl;
+
+    public Text text;
     
     // Start is called before the first frame update
     void Start()
@@ -55,18 +59,26 @@ public class ArcMovement : MonoBehaviour
     {
         targetObj = targetObject.transform.position;
         print((Input.GetAxis("Fire1")));
-       // print(energyLevel);
+        if (ballCharge < .99)
+        text.text = (Mathf.RoundToInt(ballCharge*100+1)).ToString() + "%";
+        else
+        {
+            text.text = "100%";
+        }
+        // print(energyLevel);
         if (player1)
         {
             if (Input.GetKey(KeyCode.Space))
             {
                 ChargeBolt();
-
+                sl.value = ballCharge;
+                
             }
 
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                sl.value = 0;
                 Vector3 CubeHeight = new Vector3(0, -0.5f, 0); 
                 GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight , Quaternion.identity);
                 //thunderBolt.transform.localScale += ChargeBolt();
@@ -164,13 +176,13 @@ public class ArcMovement : MonoBehaviour
             {
                 ChargeBolt();
                 charging = true;
-
+                sl.value = ballCharge;
             }
                     
                     
             if (Input.GetAxis("Fire1")== 0) //Change to controller right trigger
             {
-
+                sl.value = 0;
                 if (charging)
                 {
                     Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
