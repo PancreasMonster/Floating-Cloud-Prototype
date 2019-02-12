@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class TargetMovement : MonoBehaviour
@@ -148,5 +149,14 @@ public class TargetMovement : MonoBehaviour
                 Y_isAxisInUse = false;
             }
         }
+        
+        
+    }
+
+    public Vector3 targetPosition()
+    {
+        return transform.position;
+
+
     }
 }

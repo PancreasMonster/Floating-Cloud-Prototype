@@ -38,6 +38,8 @@ public class ArcMovement : MonoBehaviour
     public float controllerSensitivity;
 
     public LayerMask layer;
+
+    public GameObject targetObject;
     
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,7 @@ public class ArcMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        targetObj = targetObject.transform.position;
        // print(energyLevel);
         if (player1)
         {
@@ -88,7 +91,7 @@ public class ArcMovement : MonoBehaviour
 
             }
 
-            if (Input.GetMouseButtonDown(0))
+            /*if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hitInfo = new RaycastHit();
                 bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, layer);
@@ -96,11 +99,11 @@ public class ArcMovement : MonoBehaviour
                 {
                     if (hitInfo.transform.gameObject.tag == "Tile")
                     {
-                        Vector3 temp = hitInfo.transform.gameObject.transform.position;
-                        targetObj = temp + new Vector3(0, 0f, 0);
+                        //Vector3 temp = hitInfo.transform.gameObject.transform.position;
+                       // targetObj = temp + new Vector3(0, 0f, 0);
                     }
                 }
-            }
+            }*/
 
 
         }
@@ -111,7 +114,7 @@ public class ArcMovement : MonoBehaviour
            // Debug.Log("Y: " + Input.GetAxis("ControllerY"));
             var deadzone = 0.1f;
             
-            if (Input.GetAxis("ControllerX") >= deadzone)              //Change to controller x axis
+            /*if (Input.GetAxis("ControllerX") >= deadzone)              //Change to controller x axis
             {
                 cursor.transform.position += Vector3.right * controllerSensitivity;
 
@@ -150,45 +153,49 @@ public class ArcMovement : MonoBehaviour
                 if (hit2.transform.tag == "Player1Tile")
                 {
 
-                    if (Input.GetButtonDown("Fire1"))
-                    {
-                        ChargeBolt();
-
-                    }
-                    
-                    
-                    if (Input.GetButtonDown("Fire1")) //Change to controller right trigger
-                    {
-                        print("Tile Selected");
-                        Vector3 CubeHeight = new Vector3(0, -1f, 0);
-                        Vector3 temp = hit2.transform.gameObject.transform.position;
-                        targetObj = temp + new Vector3(0, 0f, 0);
-
-                        GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
-                        //thunderBolt.transform.localScale += ChargeBolt();
-                        thunderBolt.gameObject.layer = 4;
-                        Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
-                        boltRB.velocity = BallisticVel(targetObj, shootAngle);
-                        //boltEnergyscript.energyLevel() += energyLevel;
-                        EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
-                        RaycastHit checkTile;
-
-                        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
-                        {
-                            Debug.Log(checkTile.transform.name);
-                            GameObject tileBelow = checkTile.transform.gameObject;
-                            float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
-                            
-                            tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
-
-                            EH.EnergyLevel(energyDrained);
-                        }
-
-                        sizeIncrement = Vector3.zero;
-                        ballCharge = 0;
-
-                    }
+                   
                 }
+            }*/
+            if (Input.GetButton("Fire1"))
+            {
+                ChargeBolt();
+                      
+
+            }
+                    
+                    
+            if (Input.GetButtonUp("Fire1")) //Change to controller right trigger
+            {
+                
+                
+                Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
+                //Vector3 temp = hit2.transform.gameObject.transform.position;
+                //targetObj = temp + new Vector3(0, 0f, 0);
+
+                GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
+                //thunderBolt.transform.localScale += ChargeBolt();
+                //thunderBolt.gameObject.layer = 4;
+                Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
+                boltRB.velocity = BallisticVel(targetObj, shootAngle);
+                //boltEnergyscript.energyLevel() += energyLevel;
+                EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+                
+                RaycastHit checkTile;
+
+                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                {
+                    Debug.Log(checkTile.transform.name);
+                    GameObject tileBelow = checkTile.transform.gameObject;
+                    float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
+                            
+                    tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+
+                    EH.EnergyLevel(energyDrained);
+                }
+
+                sizeIncrement = Vector3.zero;
+                ballCharge = 0;
+
             }
         }
     }
