@@ -9,6 +9,11 @@ public class Energy : MonoBehaviour
     public float energy, maxEnergy, energyRecharge;
     TextMesh text;
     bool dead;
+    public LayerMask layer;
+    public List<Light> lights = new List<Light>();
+    Color original;
+    bool target1, target2;
+    //Light[] light;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +22,11 @@ public class Energy : MonoBehaviour
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = transform.position;
         cube.gameObject.layer = 5;
+        foreach (Light l in GetComponentsInChildren<Light>())
+        {
+            lights.Add(l);
+        }
+        original = lights[1].color;
     }
 
     // Update is called once per frame
@@ -41,13 +51,37 @@ public class Energy : MonoBehaviour
             Destroy(this.gameObject, 4);
         }
 
-        if (!dead)
-        text.text = energy.ToString();
+        if (!dead && text != null)
+        text.text = (Mathf.RoundToInt(energy)).ToString();
         else
         {
+            if (text != null)
             text.text = "";
         }
         //print(energy);
+
+        RaycastHit hit;
+
+        Debug.DrawRay(transform.position, Vector3.up * 1, Color.yellow);
+
+        if (Physics.Raycast(transform.position, Vector3.up, out hit, 1, layer))
+        {
+            foreach (Light l in lights)
+            {
+                if (hit.transform.name == "TargetPlayer1")                
+                l.color = new Color(.2f, .6f, .2f);
+                if (hit.transform.name == "TargetPlayer2")
+                    l.color = new Color(.2f, .2f, .6f);
+                l.intensity = 5;
+            }
+        } else
+        {
+            foreach (Light l in lights)
+            {
+                l.color = original;
+                l.intensity = 1;
+            }
+        }
     }
 
     public void energyLevel(float amount)
