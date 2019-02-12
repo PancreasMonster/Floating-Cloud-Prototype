@@ -5486,6 +5486,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 5603832933317098874, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5603832933317098873, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6306,6 +6311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 5x5 Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603832933317098874, guid: 6c099581bd60b3249a78c9e869a62b2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5603832933317098873, guid: 6c099581bd60b3249a78c9e869a62b2b,
         type: 3}
