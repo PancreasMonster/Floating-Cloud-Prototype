@@ -47,11 +47,14 @@ public class ArcMovement : MonoBehaviour
     public Slider sl;
 
     public Text text;
+
+    Movement move;
     
     // Start is called before the first frame update
     void Start()
     {
         energyLevel = Random.Range(10, 100);
+        move = GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -72,13 +75,14 @@ public class ArcMovement : MonoBehaviour
             {
                 ChargeBolt();
                 sl.value = ballCharge;
-                
+                move.canMove = false;
             }
 
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 sl.value = 0;
+                move.canMove = true;
                 Vector3 CubeHeight = new Vector3(0, -0.5f, 0); 
                 GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight , Quaternion.identity);
                 //thunderBolt.transform.localScale += ChargeBolt();
@@ -177,6 +181,7 @@ public class ArcMovement : MonoBehaviour
                 ChargeBolt();
                 charging = true;
                 sl.value = ballCharge;
+                move.canMove = false;
             }
                     
                     
@@ -188,7 +193,7 @@ public class ArcMovement : MonoBehaviour
                     Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
                     //Vector3 temp = hit2.transform.gameObject.transform.position;
                     //targetObj = temp + new Vector3(0, 0f, 0);
-
+                    move.canMove = true;
                     GameObject thunderBolt =
                         Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
                     //thunderBolt.transform.localScale += ChargeBolt();
@@ -226,8 +231,8 @@ public class ArcMovement : MonoBehaviour
     {
         if (ballCharge < .99f)
         {
-            ballCharge += (1 / chargeSpeed) * Time.deltaTime;
-            energyLevel -= (1 / chargeSpeed) * Time.deltaTime;
+            ballCharge += (1 / chargeSpeed) * Time.deltaTime * 3;
+            energyLevel -= (1 / chargeSpeed) * Time.deltaTime * 3;
             sizeIncrement = new Vector3(ballCharge, ballCharge, ballCharge);
            
         }

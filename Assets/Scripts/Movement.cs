@@ -36,6 +36,7 @@ public class Movement : MonoBehaviour
             {
                 gameObject.AddComponent<Rigidbody>();
                 dead = true;
+                canMove = false;
             }
         }
 
