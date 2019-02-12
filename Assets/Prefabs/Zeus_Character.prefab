@@ -104,7 +104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382577186676479125}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.6767996, y: 0.36694613, z: -0.28142154, w: 0.5727956}
   m_LocalPosition: {x: -0.58, y: 0, z: 0.4960001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -112,7 +112,7 @@ Transform:
   - {fileID: 9181867309014018848}
   m_Father: {fileID: 7366215059560094314}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 100.927, y: -12.007996, z: -66.854004}
 --- !u!33 &1000714014082216077
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -260,14 +260,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2649668193022905045}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.48279387, y: -0.15930331, z: 0.13576, w: 0.85035396}
   m_LocalPosition: {x: 0.58, y: 0, z: 0.4960001}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 3745777069580928768}
   m_Father: {fileID: 7366215059560094314}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 59.808002, y: -16.145, z: 8.815001}
 --- !u!33 &7714244664098398640
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -338,14 +338,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3180608095911228263}
-  m_LocalRotation: {x: -0, y: -1.1925901e-16, z: 5.2129767e-24, w: 1}
+  m_LocalRotation: {x: 0.50973684, y: -1.02602146e-16, z: 6.0790754e-17, w: 0.86033046}
   m_LocalPosition: {x: -0.23500001, y: -0.66569996, z: -0.19699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3732735593449542410}
   m_Father: {fileID: 5180942767887855724}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 61.293003, y: 0, z: 0}
 --- !u!33 &488366033881404390
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -493,13 +493,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3667195840954326269}
-  m_LocalRotation: {x: -0, y: -1.1925901e-16, z: 5.2129767e-24, w: 1}
+  m_LocalRotation: {x: 0.8142445, y: -0.000000036787245, z: 0.000000016763808, w: 0.5805221}
   m_LocalPosition: {x: -0.23500001, y: -0.66569996, z: -0.19699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9125111716594230032}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 109.024994, y: -0.000015258789, z: -0.000015258789}
 --- !u!33 &657568198898461607
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -872,6 +872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7487631047238755729}
+  - component: {fileID: 6854646731165261313}
   m_Layer: 0
   m_Name: Zeus_Character
   m_TagString: Untagged
@@ -894,6 +895,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6854646731165261313
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157488776348938644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 171ec0861e82781499e1bfebc5615341, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1549785491569958275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,15 +1203,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 987d9b283bfd8984badeb85847d8922e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 987d9b283bfd8984badeb85847d8922e, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 987d9b283bfd8984badeb85847d8922e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 987d9b283bfd8984badeb85847d8922e, type: 3}
-      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 987d9b283bfd8984badeb85847d8922e, type: 3}
@@ -1235,15 +1255,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.000000022351735
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.15333301
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.98817456
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
       propertyPath: m_RootOrder
@@ -1259,15 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: 17.640001
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: db68e3c48e37522488f5586264867cd1, type: 3}
       propertyPath: m_Materials.Array.data[0]
