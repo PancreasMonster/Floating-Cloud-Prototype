@@ -63,7 +63,7 @@ public class ArcMovement : MonoBehaviour
     void Update()
     {
         targetObj = targetObject.transform.position;
-        print((Input.GetAxis("Fire2")));
+        //print((Input.GetAxis("Fire2")));
         if (ballCharge < .99)
         text.text = (Mathf.RoundToInt(ballCharge*100+1)).ToString() + "%";
         else

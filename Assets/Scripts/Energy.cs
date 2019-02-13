@@ -15,6 +15,9 @@ public class Energy : MonoBehaviour
     bool target1, target2;
     //Light[] light;
 
+    Vector3 originalScale;
+    public GameObject cloudMesh;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +30,16 @@ public class Energy : MonoBehaviour
             lights.Add(l);
         }
         original = lights[1].color;
+        originalScale = cloudMesh.transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        cloudMesh.transform.localScale = new Vector3(Mathf.Clamp(originalScale.x * (energy / maxEnergy), originalScale.x / 2, originalScale.x), 
+            Mathf.Clamp(originalScale.y * (energy / maxEnergy), originalScale.y / 2, originalScale.y), 
+            Mathf.Clamp(originalScale.z * (energy / maxEnergy), originalScale.z / 2, originalScale.z));
+        //cloudMesh.transform.localScale = originalScale * energy / maxEnergy * 2;
         if (energy < maxEnergy)
         {
             energy += energyRecharge * Time.deltaTime;
@@ -47,6 +55,7 @@ public class Energy : MonoBehaviour
             {
                 gameObject.AddComponent<Rigidbody>();
                 dead = true;
+                cloudMesh.AddComponent<Rigidbody>();
             }
             Destroy(this.gameObject, 4);
         }
