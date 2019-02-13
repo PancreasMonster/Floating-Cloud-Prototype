@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
         RaycastHit checkTile;
 
-        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer)) {
+        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 14, layer)) {
 
         }
         else
@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour
 
 
 
-                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 3f, layer))
+                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 6f, layer))
                 {
                     transform.Translate(Vector3.left * speed);
                     gridX += 1;
@@ -58,7 +58,7 @@ public class Movement : MonoBehaviour
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 3f, layer))
+                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 6f, layer))
                 {
                     transform.Translate(Vector3.back * speed);
                     gridY += 1;
@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow) && canMove)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3f, layer))
+                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 6f, layer))
                 {
                     transform.Translate(Vector3.right * speed);
                     gridX -= 1;
@@ -78,7 +78,7 @@ public class Movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow) && canMove)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3f, layer))
+                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 6f, layer))
                 {
                     transform.Translate(Vector3.forward * speed);
                     gridY -= 1;

@@ -92,7 +92,7 @@ public class ArcMovement : MonoBehaviour
                 EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
                 RaycastHit checkTile;
 
-                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 10, layer))
                 {
                     Debug.Log(checkTile.transform.name);
                     GameObject tileBelow = checkTile.transform.gameObject;
@@ -198,14 +198,14 @@ public class ArcMovement : MonoBehaviour
                         Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
                     //thunderBolt.transform.localScale += ChargeBolt();
                     //thunderBolt.gameObject.layer = 4;
-                    Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
+                    Rigidbody boltRB = thunderBolt.AddComponent<Rigidbody>();
                     boltRB.velocity = BallisticVel(targetObj, shootAngle);
                     //boltEnergyscript.energyLevel() += energyLevel;
                     EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
 
                     RaycastHit checkTile;
 
-                    if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                    if (Physics.Raycast(transform.position, -transform.up, out checkTile, 10, layer))
                     {
                         Debug.Log(checkTile.transform.name);
                         GameObject tileBelow = checkTile.transform.gameObject;

@@ -13,11 +13,15 @@ public class Energy : MonoBehaviour
     public List<Light> lights = new List<Light>();
     Color original;
     bool target1, target2;
+    public GameObject cloudChild;
+
+    private Vector3 cloudScale;
     //Light[] light;
 
     // Start is called before the first frame update
     void Start()
     {
+        cloudScale = cloudChild.transform.localScale;
         text = GetComponentInChildren<TextMesh>();
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = transform.position;
@@ -32,6 +36,7 @@ public class Energy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cloudChild.transform.localScale = cloudScale * (energy / maxEnergy);
         if (energy < maxEnergy)
         {
             energy += energyRecharge * Time.deltaTime;
