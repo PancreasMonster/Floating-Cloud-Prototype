@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     Transform tr;
     public bool X_isAxisInUse = false, Y_isAxisInUse = false;
     public LayerMask layer;
+    public GameOverScipt GOS;
 
     void Start()
     {
@@ -27,21 +28,26 @@ public class Movement : MonoBehaviour
 
         RaycastHit checkTile;
 
-        if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer)) {
-
-        }
-        else
-        {
-            if (!dead)
-            {
-                gameObject.AddComponent<Rigidbody>();
-                dead = true;
-                canMove = false;
-            }
-        }
+        
 
         if (player1)
         {
+
+            if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+            {
+
+            }
+            else
+            {
+                if (!dead)
+                {
+                    gameObject.AddComponent<Rigidbody>();
+                    dead = true;
+                    canMove = false;
+                    GOS.Player1Win();
+                }
+            }
+
             if (Input.GetAxisRaw ("Dpad2x") == -1 && canMove && X_isAxisInUse == false)
             {
                 
@@ -150,6 +156,22 @@ public class Movement : MonoBehaviour
         if (player2)
         {
             //Debug.Log(Input.GetAxis("BiggerBenjamin"));
+
+
+            if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+            {
+
+            }
+            else
+            {
+                if (!dead)
+                {
+                    gameObject.AddComponent<Rigidbody>();
+                    dead = true;
+                    canMove = false;
+                    GOS.Player2Win();
+                }
+            }
 
             if (Input.GetAxisRaw ("BigBob") == -1 && canMove && X_isAxisInUse == false)
             {
