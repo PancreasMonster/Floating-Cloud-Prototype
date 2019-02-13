@@ -74,7 +74,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ArcMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2545">
+            <state relative-caret-position="719">
               <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
               <folding>
                 <marker date="1550071973802" expanded="false" signature="6:279" ph="..." />
@@ -349,7 +349,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27651006" />
@@ -519,7 +519,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ArcMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2545">
+        <state relative-caret-position="719">
           <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
           <folding>
             <marker date="1550071973802" expanded="false" signature="6:279" ph="..." />
