@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
 
         if (player1)
         {
-            if (Input.GetKeyDown(KeyCode.A) && canMove)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && canMove)
             {
                 RaycastHit hit;
 
@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
                     gridX += 1;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.S) && canMove)
+            if (Input.GetKeyDown(KeyCode.DownArrow) && canMove)
             {
                 RaycastHit hit;
 
@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetKeyDown(KeyCode.D) && canMove)
+            if (Input.GetKeyDown(KeyCode.RightArrow) && canMove)
             {
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3f, layer))
@@ -75,7 +75,7 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetKeyDown(KeyCode.W) && canMove)
+            if (Input.GetKeyDown(KeyCode.UpArrow) && canMove)
             {
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3f, layer))
