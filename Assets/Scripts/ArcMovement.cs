@@ -23,6 +23,8 @@ public class ArcMovement : MonoBehaviour
     public float bolfSpeed;
 
     private bool charging = false;
+    private bool charging1 = false;
+
 
     private float ballCharge = 0;
     public float chargeSpeed = 5;
@@ -61,7 +63,7 @@ public class ArcMovement : MonoBehaviour
     void Update()
     {
         targetObj = targetObject.transform.position;
-        print((Input.GetAxis("Fire1")));
+        print((Input.GetAxis("Fire2")));
         if (ballCharge < .99)
         text.text = (Mathf.RoundToInt(ballCharge*100+1)).ToString() + "%";
         else
@@ -71,41 +73,49 @@ public class ArcMovement : MonoBehaviour
         // print(energyLevel);
         if (player1)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetAxis("Fire2")> 0)
             {
                 ChargeBolt();
+                charging1 = true;
+                print(charging1);
                 sl.value = ballCharge;
                 move.canMove = false;
             }
 
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetAxis("Fire2")== 0)
             {
-                sl.value = 0;
-                move.canMove = true;
-                Vector3 CubeHeight = new Vector3(0, -0.5f, 0); 
-                GameObject thunderBolt = Instantiate(projectile, transform.position + CubeHeight , Quaternion.identity);
-                //thunderBolt.transform.localScale += ChargeBolt();
-                Rigidbody boltRB = thunderBolt.AddComponent<Rigidbody>();
-                boltRB.velocity = BallisticVel(targetObj, shootAngle);
-                //boltEnergyscript.energyLevel() += energyLevel;
-                EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
-                RaycastHit checkTile;
-
-                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                if (charging1)
                 {
-                    Debug.Log(checkTile.transform.name);
-                    GameObject tileBelow = checkTile.transform.gameObject;
-                    float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
-                    tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
 
-                    EH.EnergyLevel(energyDrained);
+                    sl.value = 0;
+                    move.canMove = true;
+                    Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
+                    GameObject thunderBolt =
+                        Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
+                    //thunderBolt.transform.localScale += ChargeBolt();
+                    Rigidbody boltRB = thunderBolt.AddComponent<Rigidbody>();
+                    boltRB.velocity = BallisticVel(targetObj, shootAngle);
+                    //boltEnergyscript.energyLevel() += energyLevel;
+                    EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+                    RaycastHit checkTile;
+
+                    if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                    {
+                        Debug.Log(checkTile.transform.name);
+                        GameObject tileBelow = checkTile.transform.gameObject;
+                        float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
+                        tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+
+                        EH.EnergyLevel(energyDrained);
+                    }
+
+
+
+                    sizeIncrement = Vector3.zero;
+                    ballCharge = 0;
+                    charging1 = false;
                 }
-
-
-
-                sizeIncrement = Vector3.zero;
-                ballCharge = 0;
 
 
 
@@ -198,7 +208,7 @@ public class ArcMovement : MonoBehaviour
                         Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
                     //thunderBolt.transform.localScale += ChargeBolt();
                     //thunderBolt.gameObject.layer = 4;
-                    Rigidbody boltRB = thunderBolt.GetComponent<Rigidbody>();
+                    Rigidbody boltRB = thunderBolt.AddComponent<Rigidbody>();
                     boltRB.velocity = BallisticVel(targetObj, shootAngle);
                     //boltEnergyscript.energyLevel() += energyLevel;
                     EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();

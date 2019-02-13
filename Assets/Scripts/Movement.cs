@@ -42,7 +42,67 @@ public class Movement : MonoBehaviour
 
         if (player1)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && canMove)
+            if (Input.GetAxisRaw ("Dpad2x") == -1 && canMove && X_isAxisInUse == false)
+            {
+                
+
+                X_isAxisInUse = true;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 3f, layer))
+                {
+                    transform.Translate(Vector3.left * speed);
+                    gridX += 1;
+                }
+            }
+            if (Input.GetAxisRaw("Dpad2y") == -1 && canMove && Y_isAxisInUse == false)
+            {
+                Y_isAxisInUse = true;
+                RaycastHit hit;
+
+                if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 3f, layer))
+                {
+                    transform.Translate(Vector3.back * speed);
+                    gridY += 1;
+                }
+
+            }
+            if (Input.GetAxisRaw("Dpad2x") == 1 && canMove && X_isAxisInUse == false)
+            {
+                X_isAxisInUse = true;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3f, layer))
+                {
+                    transform.Translate(Vector3.right * speed);
+                    gridX -= 1;
+                }
+
+            }
+            if (Input.GetAxisRaw("Dpad2y") == 1 && canMove && Y_isAxisInUse == false)
+            {
+                Y_isAxisInUse = true;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3f, layer))
+                {
+                    transform.Translate(Vector3.forward * speed);
+                    gridY -= 1;
+                }
+
+            }
+
+            if (Input.GetAxisRaw("Dpad2x") == 0)
+            {
+                X_isAxisInUse = false;
+            }
+
+            if (Input.GetAxisRaw("Dpad2y") == 0)
+            {
+                Y_isAxisInUse = false;
+            }
+        }
+            
+            
+            
+            /*if (Input.GetKeyDown(KeyCode.LeftArrow) && canMove)
             {
                 RaycastHit hit;
 
@@ -84,8 +144,8 @@ public class Movement : MonoBehaviour
                     gridY -= 1;
                 }
 
-            }
-        }
+            }*/
+        
 
         if (player2)
         {
