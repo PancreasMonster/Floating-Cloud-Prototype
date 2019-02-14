@@ -20,6 +20,12 @@ public class Energy : MonoBehaviour
     Vector3 originalScale;
     public GameObject cloudMesh;
 
+    public Material Energy20;
+    public Material Energy40;
+    public Material Energy50;
+        
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,14 +106,14 @@ public class Energy : MonoBehaviour
         }
 
         if (energy > 40)
-            rend.material.color = Color.Lerp(rend.material.color, Color.yellow, .5f * Time.deltaTime);
+            rend.sharedMaterial.color = Color.Lerp(rend.sharedMaterial.color, Energy20.color, .5f * Time.deltaTime);
         else if (energy > 20)
         {
-            rend.material.color = Color.Lerp(rend.material.color, Color.red, .5f * Time.deltaTime);
+            rend.sharedMaterial.color = Color.Lerp(rend.sharedMaterial.color, Energy40.color, .5f * Time.deltaTime);
         }
         else
         {
-            rend.material.color = Color.Lerp(rend.material.color, c, .5f * Time.deltaTime);
+            rend.sharedMaterial.color = Color.Lerp(rend.sharedMaterial.color, Energy50.color, .5f * Time.deltaTime);
         }
     }
 
@@ -131,5 +137,26 @@ public class Energy : MonoBehaviour
     public void stopDraining()
     {
         draining = false;
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Bolt"))
+        {
+            GameObject ps = transform.GetChild(5).gameObject;
+            ps.SetActive(false);
+            ps.SetActive(true);
+            //Invoke("DisablePS", 4);
+            
+            
+        }
+
+    }
+
+
+    void DisablePS()
+    {
+        GameObject ps = transform.GetChild(5).gameObject;
+        ps.SetActive(false);
     }
 }
