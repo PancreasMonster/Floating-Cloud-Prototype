@@ -14,6 +14,7 @@ public class Energy : MonoBehaviour
     Color original;
     bool target1, target2, draining;
     //Light[] light;
+    MeshRenderer rend;
 
     Vector3 originalScale;
     public GameObject cloudMesh;
@@ -21,6 +22,7 @@ public class Energy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rend = GetComponent<MeshRenderer>();
         text = GetComponentInChildren<TextMesh>();
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = transform.position;
@@ -37,8 +39,8 @@ public class Energy : MonoBehaviour
     void Update()
     {
         cloudMesh.transform.localScale = new Vector3(Mathf.Clamp(originalScale.x * (energy / maxEnergy), originalScale.x / 2, originalScale.x),
-            Mathf.Clamp(originalScale.y * (energy / maxEnergy), originalScale.y / 2, originalScale.y),
-            Mathf.Clamp(originalScale.z * (energy / maxEnergy), originalScale.z / 2, originalScale.z));
+            Mathf.Clamp(originalScale.y * (energy / maxEnergy), originalScale.x / 2, originalScale.y),
+            Mathf.Clamp(originalScale.z * (energy / maxEnergy), originalScale.x / 2, originalScale.z));
         //cloudMesh.transform.localScale = originalScale * energy / maxEnergy * 2;
         //if (!draining) { 
         if (energy < maxEnergy)
@@ -93,6 +95,13 @@ public class Energy : MonoBehaviour
                 l.color = original;
                 l.intensity = 1;
             }
+        }
+
+        if (energy > 40)
+        rend.material.color = Color.yellow;
+        else
+        {
+            rend.material.color = Color.white;
         }
     }
 

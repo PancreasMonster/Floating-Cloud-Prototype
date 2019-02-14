@@ -10222,6 +10222,7 @@ MonoBehaviour:
   targetObject: {fileID: 1860348379}
   sl: {fileID: 335811334}
   text: {fileID: 333007561}
+  drainRate: 0
 --- !u!4 &297095140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
@@ -16446,6 +16447,7 @@ MonoBehaviour:
   targetObject: {fileID: 322500283}
   sl: {fileID: 700291329}
   text: {fileID: 274662576}
+  drainRate: 0
 --- !u!4 &840439917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
@@ -42399,6 +42401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564677075380012354, guid: 81dbbac547192114bab8b97b8ee83141,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 460178658930885171, guid: 81dbbac547192114bab8b97b8ee83141,
         type: 3}
