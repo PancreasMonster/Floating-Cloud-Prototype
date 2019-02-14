@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class AnimatorParameters : MonoBehaviour
 {
-
+    //ArcMovement arc_script;
     Movement move_script;
     Animator anim;
 
     void Start()
     {
+        //arc_script = GetComponent<ArcMovement>();
         move_script = GetComponent<Movement>();
         anim = GetComponentInChildren<Animator>();
     }
@@ -23,6 +24,19 @@ public class AnimatorParameters : MonoBehaviour
         } else
         {
             anim.SetBool("Is Moving", false);
+        }
+
+        if (move_script.dead == true)
+        {
+            anim.SetBool("Dead", true);
+        }
+
+        if (move_script.canMove == false)
+        {
+            anim.SetBool("Is Charging", true);
+        } else
+        {
+            anim.SetBool("Is Charging", false);
         }
     }
 }
