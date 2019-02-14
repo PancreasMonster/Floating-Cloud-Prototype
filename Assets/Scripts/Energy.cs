@@ -27,6 +27,9 @@ public class Energy : MonoBehaviour
     private Vector3 largeLightningPos;
     private GameObject LargeLightning;
     
+    public AudioSource blockHit;
+    public AudioSource Blockdead;
+    
         
 
 
@@ -78,6 +81,7 @@ public class Energy : MonoBehaviour
                 
                 
                 LargeLightning.SetActive(true);
+                Blockdead.Play();
 
             }
             
@@ -154,6 +158,8 @@ public class Energy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bolt"))
         {
+            blockHit.Play();
+            
             GameObject ps = transform.GetChild(5).gameObject;
             ps.SetActive(false);
             ps.SetActive(true);

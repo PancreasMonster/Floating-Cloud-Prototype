@@ -14,6 +14,8 @@ public class EnergyHolder : MonoBehaviour
     private Vector3 boltTarget;
     private float boltAngle;
 
+  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,7 @@ public class EnergyHolder : MonoBehaviour
         if (col.gameObject.CompareTag("Tile"))
         {
            col.gameObject.GetComponent<Energy>().energyLevel(energyLevel);
+          
            Destroy(gameObject);
             
         }

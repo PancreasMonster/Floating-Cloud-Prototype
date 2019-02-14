@@ -57,6 +57,11 @@ public class ArcMovement : MonoBehaviour
     public float drainRate;
 
     private bool canCharge = true;
+    public AudioSource chargeUp;
+    public AudioSource chargeRelease;
+    public AudioSource boltFlying;
+
+
     
     // Start is called before the first frame update
     void Start()
@@ -83,6 +88,7 @@ public class ArcMovement : MonoBehaviour
             {
                 ChargeBolt();
                 charging1 = true;
+                chargeUp.Play();
                 print(charging1);
                 sl.value = ballCharge;
                 move.canMove = false;
@@ -207,12 +213,18 @@ public class ArcMovement : MonoBehaviour
             if (Input.GetAxis("Fire1")> 0)
             {
                 ChargeBolt();
+                if (charging == false)
+                {
+                    chargeUp.Play();
+                }
                 charging = true;
                 sl.value = ballCharge;
                 move.canMove = false;
-
+               
+                
                 RaycastHit checkTile;
-
+                
+                
                 if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
                 {
                     GameObject tileBelow = checkTile.transform.gameObject;
@@ -227,6 +239,11 @@ public class ArcMovement : MonoBehaviour
                 sl.value = 0;
                 if (charging)
                 {
+                    chargeUp.Stop();
+                    
+                    chargeRelease.Play();
+                    boltFlying.Play();
+                    
                     Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
                     //Vector3 temp = hit2.transform.gameObject.transform.position;
                     //targetObj = temp + new Vector3(0, 0f, 0);
