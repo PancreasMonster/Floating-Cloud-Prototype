@@ -83,6 +83,14 @@ public class ArcMovement : MonoBehaviour
                 print(charging1);
                 sl.value = ballCharge;
                 move.canMove = false;
+                RaycastHit checkTile;
+
+                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                {
+                    GameObject tileBelow = checkTile.transform.gameObject;
+                    tileBelow.GetComponent<Energy>().startDraining();
+                    //tileBelow.GetComponent<Energy>().energy -= tileBelow.GetComponent<Energy>().energy / tileBelow.GetComponent<Energy>().maxEnergy;
+                }
             }
 
 
@@ -105,18 +113,20 @@ public class ArcMovement : MonoBehaviour
 
                     if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
                     {
-                        Debug.Log(checkTile.transform.name);
+                        //Debug.Log(checkTile.transform.name);
                         GameObject tileBelow = checkTile.transform.gameObject;
                         float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
-                        tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
 
-                        EH.EnergyLevel(energyDrained);
+                        //tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+                        tileBelow.GetComponent<Energy>().stopDraining();
+                        EH.EnergyLevel(energyDrainAmount);
                     }
 
 
 
                     sizeIncrement = Vector3.zero;
                     ballCharge = 0;
+                    energyDrainAmount = 0;
                     charging1 = false;
                 }
 
