@@ -27,6 +27,7 @@ public class ArcMovement : MonoBehaviour
 
 
     private float ballCharge = 0;
+    private float energyDrainAmount = 0;
     public float chargeSpeed = 5;
 
     private Vector3 sizeIncrement;
@@ -234,11 +235,12 @@ public class ArcMovement : MonoBehaviour
 
                         //tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
                         tileBelow.GetComponent<Energy>().stopDraining();
-                        EH.EnergyLevel(energyDrained);
+                        EH.EnergyLevel(energyDrainAmount);
                     } 
 
                     sizeIncrement = Vector3.zero;
                     ballCharge = 0;
+                    energyDrainAmount = 0;
                     charging = false;
                 }
 
@@ -262,6 +264,7 @@ public class ArcMovement : MonoBehaviour
             {
                 GameObject tileBelow = checkTile.transform.gameObject;
                 tileBelow.GetComponent<Energy>().energy -= tileBelow.GetComponent<Energy>().energy / tileBelow.GetComponent<Energy>().maxEnergy;
+                energyDrainAmount += tileBelow.GetComponent<Energy>().energy / tileBelow.GetComponent<Energy>().maxEnergy;
             } 
 
         }
