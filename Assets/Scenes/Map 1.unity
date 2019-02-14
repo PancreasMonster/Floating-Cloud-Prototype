@@ -10209,7 +10209,7 @@ MonoBehaviour:
   targetObj: {x: 0, y: 0, z: 0}
   shootAngle: 30
   bolfSpeed: 0
-  chargeSpeed: 5
+  chargeSpeed: 15
   boltEnergyscript: {fileID: 3299457790704450615, guid: 5caefc70a5f996a4e9086961ee9f691d,
     type: 3}
   player1: 1
@@ -16434,7 +16434,7 @@ MonoBehaviour:
   targetObj: {x: 0, y: 0, z: 0}
   shootAngle: 45
   bolfSpeed: 0
-  chargeSpeed: 5
+  chargeSpeed: 1
   boltEnergyscript: {fileID: 3299457790704450615, guid: 5caefc70a5f996a4e9086961ee9f691d,
     type: 3}
   player1: 0
@@ -42421,6 +42421,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047895135600972467, guid: 81dbbac547192114bab8b97b8ee83141,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047895135364977121, guid: 81dbbac547192114bab8b97b8ee83141,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047895135180228657, guid: 81dbbac547192114bab8b97b8ee83141,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047895134135050616, guid: 81dbbac547192114bab8b97b8ee83141,
+        type: 3}
+      propertyPath: energy
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81dbbac547192114bab8b97b8ee83141, type: 3}

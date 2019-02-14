@@ -15,6 +15,7 @@ public class Energy : MonoBehaviour
     bool target1, target2, draining;
     //Light[] light;
     MeshRenderer rend;
+    Color c;
 
     Vector3 originalScale;
     public GameObject cloudMesh;
@@ -22,7 +23,8 @@ public class Energy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<MeshRenderer>();
+        rend = cloudMesh.GetComponent<MeshRenderer>();
+        c = cloudMesh.GetComponent<MeshRenderer>().material.color;
         text = GetComponentInChildren<TextMesh>();
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = transform.position;
@@ -38,11 +40,11 @@ public class Energy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cloudMesh.transform.localScale = new Vector3(Mathf.Clamp(originalScale.x * (energy / maxEnergy), originalScale.x / 2, originalScale.x),
-            Mathf.Clamp(originalScale.y * (energy / maxEnergy), originalScale.x / 2, originalScale.y),
-            Mathf.Clamp(originalScale.z * (energy / maxEnergy), originalScale.x / 2, originalScale.z));
+        cloudMesh.transform.localScale = new Vector3(Mathf.Clamp(originalScale.x * (energy / maxEnergy), 3 * (originalScale.x/10), originalScale.x),
+            Mathf.Clamp(originalScale.y * (energy / maxEnergy), 3 * (originalScale.x / 10), originalScale.y),
+            Mathf.Clamp(originalScale.z * (energy / maxEnergy), 3 * (originalScale.x / 10), originalScale.z));
         //cloudMesh.transform.localScale = originalScale * energy / maxEnergy * 2;
-        //if (!draining) { 
+        if (!draining) { 
         if (energy < maxEnergy)
         {
             energy += energyRecharge * Time.deltaTime;
@@ -52,7 +54,7 @@ public class Energy : MonoBehaviour
         {
             energy = maxEnergy;
         }
-   // }
+    }
 
         if (energy <= 0)
         {
@@ -98,10 +100,14 @@ public class Energy : MonoBehaviour
         }
 
         if (energy > 40)
-        rend.material.color = Color.yellow;
+            rend.material.color = Color.Lerp(rend.material.color, Color.yellow, .5f * Time.deltaTime);
+        else if (energy > 20)
+        {
+            rend.material.color = Color.Lerp(rend.material.color, Color.red, .5f * Time.deltaTime);
+        }
         else
         {
-            rend.material.color = Color.white;
+            rend.material.color = Color.Lerp(rend.material.color, c, .5f * Time.deltaTime);
         }
     }
 
@@ -124,6 +130,6 @@ public class Energy : MonoBehaviour
 
     public void stopDraining()
     {
-        draining = true;
+        draining = false;
     }
 }
