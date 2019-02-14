@@ -23,12 +23,18 @@ public class Energy : MonoBehaviour
     public Material Energy20;
     public Material Energy40;
     public Material Energy50;
+
+    private Vector3 largeLightningPos;
+    private GameObject LargeLightning;
+    
         
 
 
     // Start is called before the first frame update
     void Start()
     {
+        largeLightningPos = transform.GetChild(6).gameObject.transform.position;
+        LargeLightning = transform.GetChild(6).gameObject;
         rend = cloudMesh.GetComponent<MeshRenderer>();
         c = cloudMesh.GetComponent<MeshRenderer>().material.color;
         text = GetComponentInChildren<TextMesh>();
@@ -69,10 +75,15 @@ public class Energy : MonoBehaviour
                 gameObject.AddComponent<Rigidbody>();
                 dead = true;
                 cloudMesh.AddComponent<Rigidbody>();
+                
+                
+                LargeLightning.SetActive(true);
+
             }
+            
             Destroy(this.gameObject, 4);
         }
-
+        LargeLightning.transform.position = largeLightningPos;
         if (!dead && text != null)
         text.text = (Mathf.RoundToInt(energy)).ToString();
         else
