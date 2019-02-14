@@ -11,7 +11,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class ArcMovement : MonoBehaviour
 {
-    private Vector3 targetDir;
+    public Vector3 targetDir;
     private Vector3 target;
     private float dist;
     private float angle;
@@ -21,6 +21,7 @@ public class ArcMovement : MonoBehaviour
     public Vector3 targetObj;
     public float shootAngle;
     public float bolfSpeed;
+    
 
     private bool charging = false;
     private bool charging1 = false;
@@ -54,6 +55,8 @@ public class ArcMovement : MonoBehaviour
     Movement move;
 
     public float drainRate;
+
+    private bool canCharge = true;
     
     // Start is called before the first frame update
     void Start()
@@ -109,6 +112,8 @@ public class ArcMovement : MonoBehaviour
                     boltRB.velocity = BallisticVel(targetObj, shootAngle);
                     //boltEnergyscript.energyLevel() += energyLevel;
                     EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
+                    EH.Target(targetObj,shootAngle);
+                    
                     RaycastHit checkTile;
 
                     if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
@@ -232,6 +237,7 @@ public class ArcMovement : MonoBehaviour
                     //thunderBolt.gameObject.layer = 4;
                     Rigidbody boltRB = thunderBolt.AddComponent<Rigidbody>();
                     boltRB.velocity = BallisticVel(targetObj, shootAngle);
+                    thunderBolt.transform.LookAt(BallisticVel(targetObj, shootAngle));
                     //boltEnergyscript.energyLevel() += energyLevel;
                     EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
 
@@ -256,13 +262,30 @@ public class ArcMovement : MonoBehaviour
 
             }
         }
+        
+        RaycastHit checkTileCharge;
+
+        if (Physics.Raycast(transform.position, -transform.up, out checkTileCharge, 1, layer))
+        {
+            GameObject tileBelow = checkTileCharge.transform.gameObject;
+            if (tileBelow.GetComponent<Energy>().energy <= 1f)
+            {
+                canCharge = false;
+            }
+            else
+            {
+                canCharge = true;
+            }
+            
+        }
     }
 
 
 
     public Vector3 ChargeBolt()
     {
-        if (ballCharge < .99f)
+       
+        if (ballCharge < .99f && canCharge)
         {
             ballCharge += (1 / chargeSpeed) * Time.deltaTime;
             energyLevel -= (1 / chargeSpeed) * Time.deltaTime;
@@ -275,6 +298,7 @@ public class ArcMovement : MonoBehaviour
                 GameObject tileBelow = checkTile.transform.gameObject;
                 tileBelow.GetComponent<Energy>().energy -= tileBelow.GetComponent<Energy>().maxEnergy / 61 * (1 / chargeSpeed); 
                 energyDrainAmount += tileBelow.GetComponent<Energy>().maxEnergy / 61 * (1 / chargeSpeed);
+                
 
             } 
 

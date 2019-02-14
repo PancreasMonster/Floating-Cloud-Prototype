@@ -10320,6 +10320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b792cd1d46ae3449e327c0be4ee402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetDir: {x: 0, y: 0, z: 0}
   velocity: 0
   projectile: {fileID: 6121693285333003210, guid: 54d0f45cd39bf92449870d9bade83637,
     type: 3}
@@ -17110,7 +17111,7 @@ PrefabInstance:
     - target: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
@@ -17120,7 +17121,7 @@ PrefabInstance:
     - target: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
@@ -17135,7 +17136,7 @@ PrefabInstance:
     - target: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
         type: 3}
@@ -17197,6 +17198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b792cd1d46ae3449e327c0be4ee402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetDir: {x: 0, y: 0, z: 0}
   velocity: 0
   projectile: {fileID: 6121693285333003210, guid: 54d0f45cd39bf92449870d9bade83637,
     type: 3}
@@ -17989,11 +17991,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.043210015
       objectReference: {fileID: 0}
-    - target: {fileID: 3508287247745337007, guid: d83ee4ae11f679d46a161d24cc0a5e77,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4574267519669834442, guid: d83ee4ae11f679d46a161d24cc0a5e77,
         type: 3}
       propertyPath: maxEnergy
@@ -18003,6 +18000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: energy
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508287247745337007, guid: d83ee4ae11f679d46a161d24cc0a5e77,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83ee4ae11f679d46a161d24cc0a5e77, type: 3}
