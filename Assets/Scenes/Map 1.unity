@@ -16448,6 +16448,18 @@ MonoBehaviour:
   sl: {fileID: 700291329}
   text: {fileID: 274662576}
   drainRate: 0
+--- !u!114 &840439913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840439911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d646f05585099ad42848d11e7b383fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &840439917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4990446255898791807, guid: 94080bea094d2ba498051208b7d6a691,
