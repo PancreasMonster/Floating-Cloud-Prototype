@@ -51,12 +51,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2656" />
+          <entry key="cs" value="2708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2656" />
+          <entry key="C#" value="2708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -171,19 +171,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverScipt.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="330">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding>
-                <marker date="1550187608606" expanded="false" signature="6:135" ph="..." />
-                <marker date="1550187608606" expanded="true" signature="179:980" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="336:357" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="415:625" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="443:490" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="554:619" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="656:798" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="686:792" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="828:978" ph="{...}" />
-                <marker date="1550187608606" expanded="true" signature="857:972" ph="{...}" />
+                <marker date="1550187729612" expanded="false" signature="6:162" ph="..." />
+                <marker date="1550187729612" expanded="true" signature="206:1090" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="392:413" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="471:735" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="522:600" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="664:729" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="766:908" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="796:902" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="938:1088" ph="{...}" />
+                <marker date="1550187729612" expanded="true" signature="967:1082" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -307,7 +307,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -377,12 +377,12 @@
       <workItem from="1549973182531" duration="6391000" />
       <workItem from="1550006825970" duration="795000" />
       <workItem from="1550149102904" duration="6507000" />
-      <workItem from="1550174815278" duration="11488000" />
+      <workItem from="1550174815278" duration="11785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51367000" />
+    <option name="totallyTimeSpent" value="51664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -641,19 +641,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameOverScipt.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="330">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding>
-            <marker date="1550187608606" expanded="false" signature="6:135" ph="..." />
-            <marker date="1550187608606" expanded="true" signature="179:980" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="336:357" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="415:625" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="443:490" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="554:619" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="656:798" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="686:792" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="828:978" ph="{...}" />
-            <marker date="1550187608606" expanded="true" signature="857:972" ph="{...}" />
+            <marker date="1550187729612" expanded="false" signature="6:162" ph="..." />
+            <marker date="1550187729612" expanded="true" signature="206:1090" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="392:413" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="471:735" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="522:600" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="664:729" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="766:908" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="796:902" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="938:1088" ph="{...}" />
+            <marker date="1550187729612" expanded="true" signature="967:1082" ph="{...}" />
           </folding>
         </state>
       </provider>
