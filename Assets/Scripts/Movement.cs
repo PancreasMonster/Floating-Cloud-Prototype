@@ -48,11 +48,11 @@ public class Movement : MonoBehaviour
                 }
             }
 
-            if (Input.GetAxisRaw ("Dpad2x") == -1 && canMove && X_isAxisInUse == false)
+            if (Input.GetAxisRaw ("Dpad2y") == -1 && canMove && Y_isAxisInUse == false)
             {
                 
 
-                X_isAxisInUse = true;
+                Y_isAxisInUse = true;
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 3f, layer))
                 {
@@ -60,9 +60,9 @@ public class Movement : MonoBehaviour
                     gridX += 1;
                 }
             }
-            if (Input.GetAxisRaw("Dpad2y") == -1 && canMove && Y_isAxisInUse == false)
+            if (Input.GetAxisRaw("Dpad2x") == 1 && canMove && X_isAxisInUse == false)
             {
-                Y_isAxisInUse = true;
+                X_isAxisInUse = true;
                 RaycastHit hit;
 
                 if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 3f, layer))
@@ -72,9 +72,9 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetAxisRaw("Dpad2x") == 1 && canMove && X_isAxisInUse == false)
+            if (Input.GetAxisRaw("Dpad2y") == 1 && canMove && Y_isAxisInUse == false)
             {
-                X_isAxisInUse = true;
+                Y_isAxisInUse = true;
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3f, layer))
                 {
@@ -83,9 +83,9 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetAxisRaw("Dpad2y") == 1 && canMove && Y_isAxisInUse == false)
+            if (Input.GetAxisRaw("Dpad2x") == -1 && canMove && X_isAxisInUse == false)
             {
-                Y_isAxisInUse = true;
+                X_isAxisInUse = true;
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3f, layer))
                 {
@@ -173,11 +173,11 @@ public class Movement : MonoBehaviour
                 }
             }
 
-            if (Input.GetAxisRaw ("BigBob") == -1 && canMove && X_isAxisInUse == false)
+            if (Input.GetAxisRaw ("BiggerBenjamin") == -1 && canMove && Y_isAxisInUse == false)
             {
                 
 
-                X_isAxisInUse = true;
+                Y_isAxisInUse = true;
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (-transform.right - transform.up).normalized, out hit, 3f, layer))
                 {
@@ -185,9 +185,9 @@ public class Movement : MonoBehaviour
                     gridX += 1;
                 }
             }
-            if (Input.GetAxisRaw("BiggerBenjamin") == -1 && canMove && Y_isAxisInUse == false)
+            if (Input.GetAxisRaw("BigBob") == 1 && canMove && X_isAxisInUse == false)
             {
-                Y_isAxisInUse = true;
+                X_isAxisInUse = true;
                 RaycastHit hit;
 
                 if (Physics.Raycast(transform.position, (-transform.forward - transform.up).normalized, out hit, 3f, layer))
@@ -197,9 +197,9 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetAxisRaw("BigBob") == 1 && canMove && X_isAxisInUse == false)
+            if (Input.GetAxisRaw("BiggerBenjamin") == 1 && canMove && Y_isAxisInUse == false)
             {
-                X_isAxisInUse = true;
+                Y_isAxisInUse = true;
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (transform.right - transform.up).normalized, out hit, 3f, layer))
                 {
@@ -208,9 +208,9 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetAxisRaw("BiggerBenjamin") == 1 && canMove && Y_isAxisInUse == false)
+            if (Input.GetAxisRaw("BigBob") == -1 && canMove && X_isAxisInUse == false)
             {
-                Y_isAxisInUse = true;
+                X_isAxisInUse = true;
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, (transform.forward - transform.up).normalized, out hit, 3f, layer))
                 {
