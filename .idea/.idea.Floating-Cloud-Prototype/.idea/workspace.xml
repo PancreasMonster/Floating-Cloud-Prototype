@@ -76,34 +76,34 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ArcMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="264" column="30" lean-forward="true" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
+              <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
               <folding>
-                <marker date="1550157345343" expanded="false" signature="6:279" ph="..." />
-                <marker date="1550157345343" expanded="true" signature="321:9931" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="1211:1309" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="1367:8684" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="1587:1639" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="1691:4646" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="1744:2415" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="2069:2401" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="2461:4055" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="2506:4038" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="3333:3849" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="4069:4634" ph="/* if (Input.GetMouseButtonDown(0)) ... */" />
-                <marker date="1550157345343" expanded="true" signature="4668:8678" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="4690:4804" ph="/* Debug.Log(&quot;X: &quot; + Input.GetAxis(&quot;ControllerX&quot;)); ... */" />
-                <marker date="1550157345343" expanded="true" signature="4863:6077" ph="/* if (Input.GetAxis(&quot;ControllerX&quot;) &gt;= deadzone)              //Change to controller x axis ... */" />
-                <marker date="1550157345343" expanded="true" signature="6120:6757" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="6411:6743" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="6880:8668" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="6954:8653" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="7060:7186" ph="/* Vector3 temp = hit2.transform.gameObject.transform.position; ... */" />
-                <marker date="1550157345343" expanded="true" signature="7396:7503" ph="/* thunderBolt.transform.localScale += ChargeBolt(); ... */" />
-                <marker date="1550157345343" expanded="true" signature="7950:8466" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="8719:9446" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="8756:9410" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="9105:9398" ph="{...}" />
-                <marker date="1550157345343" expanded="true" signature="9513:9924" ph="{...}" />
+                <marker date="1550162791141" expanded="false" signature="6:279" ph="..." />
+                <marker date="1550162791141" expanded="true" signature="321:9965" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="1211:1309" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="1367:8684" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="1587:1639" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="1691:4646" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="1744:2415" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="2069:2401" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="2461:4055" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="2506:4038" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="3333:3849" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="4069:4634" ph="/* if (Input.GetMouseButtonDown(0)) ... */" />
+                <marker date="1550162791141" expanded="true" signature="4668:8678" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="4690:4804" ph="/* Debug.Log(&quot;X: &quot; + Input.GetAxis(&quot;ControllerX&quot;)); ... */" />
+                <marker date="1550162791141" expanded="true" signature="4863:6077" ph="/* if (Input.GetAxis(&quot;ControllerX&quot;) &gt;= deadzone)              //Change to controller x axis ... */" />
+                <marker date="1550162791141" expanded="true" signature="6120:6757" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="6411:6743" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="6880:8668" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="6954:8653" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="7060:7186" ph="/* Vector3 temp = hit2.transform.gameObject.transform.position; ... */" />
+                <marker date="1550162791141" expanded="true" signature="7396:7503" ph="/* thunderBolt.transform.localScale += ChargeBolt(); ... */" />
+                <marker date="1550162791141" expanded="true" signature="7950:8466" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="8719:9480" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="8756:9444" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="9097:9432" ph="{...}" />
+                <marker date="1550162791141" expanded="true" signature="9547:9958" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -121,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Energy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="705">
+              <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -244,12 +244,12 @@
       <workItem from="1549892757991" duration="10294000" />
       <workItem from="1549973182531" duration="6391000" />
       <workItem from="1550006825970" duration="795000" />
-      <workItem from="1550149102904" duration="2833000" />
+      <workItem from="1550149102904" duration="3234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36205000" />
+    <option name="totallyTimeSpent" value="36606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,8 +310,8 @@
     <entry file="file://$PROJECT_DIR$/Assets/ArcMovement.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Energy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        <state relative-caret-position="705">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -339,34 +339,34 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ArcMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="264" column="30" lean-forward="true" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
+          <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
           <folding>
-            <marker date="1550157345343" expanded="false" signature="6:279" ph="..." />
-            <marker date="1550157345343" expanded="true" signature="321:9931" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="1211:1309" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="1367:8684" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="1587:1639" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="1691:4646" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="1744:2415" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="2069:2401" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="2461:4055" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="2506:4038" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="3333:3849" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="4069:4634" ph="/* if (Input.GetMouseButtonDown(0)) ... */" />
-            <marker date="1550157345343" expanded="true" signature="4668:8678" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="4690:4804" ph="/* Debug.Log(&quot;X: &quot; + Input.GetAxis(&quot;ControllerX&quot;)); ... */" />
-            <marker date="1550157345343" expanded="true" signature="4863:6077" ph="/* if (Input.GetAxis(&quot;ControllerX&quot;) &gt;= deadzone)              //Change to controller x axis ... */" />
-            <marker date="1550157345343" expanded="true" signature="6120:6757" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="6411:6743" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="6880:8668" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="6954:8653" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="7060:7186" ph="/* Vector3 temp = hit2.transform.gameObject.transform.position; ... */" />
-            <marker date="1550157345343" expanded="true" signature="7396:7503" ph="/* thunderBolt.transform.localScale += ChargeBolt(); ... */" />
-            <marker date="1550157345343" expanded="true" signature="7950:8466" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="8719:9446" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="8756:9410" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="9105:9398" ph="{...}" />
-            <marker date="1550157345343" expanded="true" signature="9513:9924" ph="{...}" />
+            <marker date="1550162791141" expanded="false" signature="6:279" ph="..." />
+            <marker date="1550162791141" expanded="true" signature="321:9965" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="1211:1309" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="1367:8684" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="1587:1639" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="1691:4646" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="1744:2415" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="2069:2401" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="2461:4055" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="2506:4038" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="3333:3849" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="4069:4634" ph="/* if (Input.GetMouseButtonDown(0)) ... */" />
+            <marker date="1550162791141" expanded="true" signature="4668:8678" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="4690:4804" ph="/* Debug.Log(&quot;X: &quot; + Input.GetAxis(&quot;ControllerX&quot;)); ... */" />
+            <marker date="1550162791141" expanded="true" signature="4863:6077" ph="/* if (Input.GetAxis(&quot;ControllerX&quot;) &gt;= deadzone)              //Change to controller x axis ... */" />
+            <marker date="1550162791141" expanded="true" signature="6120:6757" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="6411:6743" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="6880:8668" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="6954:8653" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="7060:7186" ph="/* Vector3 temp = hit2.transform.gameObject.transform.position; ... */" />
+            <marker date="1550162791141" expanded="true" signature="7396:7503" ph="/* thunderBolt.transform.localScale += ChargeBolt(); ... */" />
+            <marker date="1550162791141" expanded="true" signature="7950:8466" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="8719:9480" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="8756:9444" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="9097:9432" ph="{...}" />
+            <marker date="1550162791141" expanded="true" signature="9547:9958" ph="{...}" />
           </folding>
         </state>
       </provider>
