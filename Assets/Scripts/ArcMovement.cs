@@ -273,8 +273,8 @@ public class ArcMovement : MonoBehaviour
             if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
             {
                 GameObject tileBelow = checkTile.transform.gameObject;
-                tileBelow.GetComponent<Energy>().energy -= 10 / tileBelow.GetComponent<Energy>().maxEnergy;
-                energyDrainAmount += 15 / tileBelow.GetComponent<Energy>().maxEnergy;
+                tileBelow.GetComponent<Energy>().energy -= (tileBelow.GetComponent<Energy>().energy / 2.66f) / tileBelow.GetComponent<Energy>().maxEnergy;
+                energyDrainAmount += (tileBelow.GetComponent<Energy>().energy / 3f) / tileBelow.GetComponent<Energy>().maxEnergy;
             } 
 
         }
