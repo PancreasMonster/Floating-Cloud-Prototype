@@ -12,7 +12,7 @@ public class Energy : MonoBehaviour
     public LayerMask layer;
     public List<Light> lights = new List<Light>();
     Color original;
-    bool target1, target2;
+    bool target1, target2, draining;
     //Light[] light;
 
     Vector3 originalScale;
@@ -36,18 +36,21 @@ public class Energy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cloudMesh.transform.localScale = new Vector3(Mathf.Clamp(originalScale.x * (energy / maxEnergy), originalScale.x / 2, originalScale.x), 
-            Mathf.Clamp(originalScale.y * (energy / maxEnergy), originalScale.y / 2, originalScale.y), 
+        cloudMesh.transform.localScale = new Vector3(Mathf.Clamp(originalScale.x * (energy / maxEnergy), originalScale.x / 2, originalScale.x),
+            Mathf.Clamp(originalScale.y * (energy / maxEnergy), originalScale.y / 2, originalScale.y),
             Mathf.Clamp(originalScale.z * (energy / maxEnergy), originalScale.z / 2, originalScale.z));
         //cloudMesh.transform.localScale = originalScale * energy / maxEnergy * 2;
+        //if (!draining) { 
         if (energy < maxEnergy)
         {
             energy += energyRecharge * Time.deltaTime;
         }
+
         if (energy > maxEnergy)
         {
             energy = maxEnergy;
         }
+   // }
 
         if (energy <= 0)
         {
@@ -104,4 +107,14 @@ public class Energy : MonoBehaviour
         energy -= reduction;
         //Debug.Log(reduction);
     } 
+
+    public void startDraining ()
+    {
+        draining = true;
+    }
+
+    public void stopDraining()
+    {
+        draining = true;
+    }
 }

@@ -51,6 +51,8 @@ public class ArcMovement : MonoBehaviour
     public Text text;
 
     Movement move;
+
+    public float drainRate;
     
     // Start is called before the first frame update
     void Start()
@@ -192,6 +194,15 @@ public class ArcMovement : MonoBehaviour
                 charging = true;
                 sl.value = ballCharge;
                 move.canMove = false;
+
+                RaycastHit checkTile;
+
+                if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+                {
+                    GameObject tileBelow = checkTile.transform.gameObject;
+                    tileBelow.GetComponent<Energy>().startDraining();
+                    //tileBelow.GetComponent<Energy>().energy -= tileBelow.GetComponent<Energy>().energy / tileBelow.GetComponent<Energy>().maxEnergy;
+                }
             }
                     
                     
@@ -217,14 +228,14 @@ public class ArcMovement : MonoBehaviour
 
                     if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
                     {
-                        Debug.Log(checkTile.transform.name);
+                        //Debug.Log(checkTile.transform.name);
                         GameObject tileBelow = checkTile.transform.gameObject;
                         float energyDrained = Mathf.Floor(tileBelow.GetComponent<Energy>().energy * ballCharge);
 
-                        tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
-
+                        //tileBelow.GetComponent<Energy>().drainEnergy(ballCharge);
+                        tileBelow.GetComponent<Energy>().stopDraining();
                         EH.EnergyLevel(energyDrained);
-                    }
+                    } 
 
                     sizeIncrement = Vector3.zero;
                     ballCharge = 0;
@@ -244,7 +255,15 @@ public class ArcMovement : MonoBehaviour
             ballCharge += (1 / chargeSpeed) * Time.deltaTime * 3;
             energyLevel -= (1 / chargeSpeed) * Time.deltaTime * 3;
             sizeIncrement = new Vector3(ballCharge, ballCharge, ballCharge);
-           
+
+            RaycastHit checkTile;
+
+            if (Physics.Raycast(transform.position, -transform.up, out checkTile, 1, layer))
+            {
+                GameObject tileBelow = checkTile.transform.gameObject;
+                tileBelow.GetComponent<Energy>().energy -= tileBelow.GetComponent<Energy>().energy / tileBelow.GetComponent<Energy>().maxEnergy;
+            } 
+
         }
         return sizeIncrement;
     }
