@@ -124,7 +124,9 @@ public class ArcMovement : MonoBehaviour
                         Instantiate(projectile, transform.position + CubeHeight, Quaternion.identity);
                     //thunderBolt.transform.localScale += ChargeBolt();
                     Rigidbody boltRB = thunderBolt.AddComponent<Rigidbody>();
+                    
                     boltRB.velocity = BallisticVel(targetObj, shootAngle);
+                    thunderBolt.transform.LookAt(BallisticVel(targetObj, shootAngle));
                     //boltEnergyscript.energyLevel() += energyLevel;
                     EnergyHolder EH = thunderBolt.AddComponent<EnergyHolder>();
                     EH.Target(targetObj,shootAngle);
