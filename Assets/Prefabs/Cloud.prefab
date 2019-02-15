@@ -672,8 +672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ff1113e135fab4cb5a67fe478a56f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 50
-  maxEnergy: 50
+  energy: 20
+  maxEnergy: 20
   energyRecharge: 4
   layer:
     serializedVersion: 2
@@ -685,6 +685,7 @@ MonoBehaviour:
   Energy50: {fileID: 2100000, guid: cb2b0057962b77d498e1a70dce6a9785, type: 2}
   blockHit: {fileID: 4647490070542593086, guid: 052789b5c964f024f97f662b2b3bc441,
     type: 3}
+  Blockdead: {fileID: 0}
 --- !u!1001 &1056275754539417623
 PrefabInstance:
   m_ObjectHideFlags: 0

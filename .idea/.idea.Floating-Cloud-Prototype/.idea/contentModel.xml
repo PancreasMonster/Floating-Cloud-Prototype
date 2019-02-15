@@ -13,6 +13,7 @@
           <e p="EnergyHolder.cs" t="Include" />
           <e p="GameOverScipt.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
+          <e p="SwitchScene.cs" t="Include" />
           <e p="TargetMovement.cs" t="Include" />
         </e>
       </e>
