@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour
                 }
             }
 
-            if (Input.GetAxisRaw ("Dpad2y") == -1 && canMove && Y_isAxisInUse == false)
+            if (Input.GetAxisRaw ("Dpad2y") == 1 && canMove && Y_isAxisInUse == false)
             {
                 
 
@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
                     gridX += 1;
                 }
             }
-            if (Input.GetAxisRaw("Dpad2x") == 1 && canMove && X_isAxisInUse == false)
+            if (Input.GetAxisRaw("Dpad2x") == -1 && canMove && X_isAxisInUse == false)
             {
                 X_isAxisInUse = true;
                 RaycastHit hit;
@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetAxisRaw("Dpad2y") == 1 && canMove && Y_isAxisInUse == false)
+            if (Input.GetAxisRaw("Dpad2y") == -1 && canMove && Y_isAxisInUse == false)
             {
                 Y_isAxisInUse = true;
                 RaycastHit hit;
@@ -83,7 +83,7 @@ public class Movement : MonoBehaviour
                 }
 
             }
-            if (Input.GetAxisRaw("Dpad2x") == -1 && canMove && X_isAxisInUse == false)
+            if (Input.GetAxisRaw("Dpad2x") == 1 && canMove && X_isAxisInUse == false)
             {
                 X_isAxisInUse = true;
                 RaycastHit hit;

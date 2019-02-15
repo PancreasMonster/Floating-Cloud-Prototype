@@ -87,8 +87,12 @@ public class ArcMovement : MonoBehaviour
             if (Input.GetAxis("Fire2")> 0)
             {
                 ChargeBolt();
+                if (charging1 == false)
+                {
+                    chargeUp.Play();
+                }
                 charging1 = true;
-                chargeUp.Play();
+              
                 print(charging1);
                 sl.value = ballCharge;
                 move.canMove = false;
@@ -108,6 +112,11 @@ public class ArcMovement : MonoBehaviour
                 if (charging1)
                 {
 
+                    chargeUp.Stop();
+                    
+                    chargeRelease.Play();
+                    boltFlying.Play();
+                    
                     sl.value = 0;
                     move.canMove = true;
                     Vector3 CubeHeight = new Vector3(0, -0.5f, 0);
