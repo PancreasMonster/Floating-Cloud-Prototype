@@ -37,7 +37,8 @@ public class EnergyHolder : MonoBehaviour
         yDistTravelled = transform.position.y - startY;
         //transform.rotation = Quaternion.LookRotation()
         Vector3 offset = new Vector3 (45,0,0);
-        transform.LookAt(BallisticVel(boltTarget, boltAngle));
+        //transform.LookAt(BallisticVel(boltTarget, boltAngle));
+        print(BallisticVel(boltTarget,boltAngle));
         
     }
 
