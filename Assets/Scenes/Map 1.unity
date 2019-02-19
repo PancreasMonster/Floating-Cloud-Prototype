@@ -20,10 +20,10 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.46
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 9cec200d4c04eb6438a475f42699feb3, type: 2}
@@ -11161,6 +11161,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 461692977}
     m_Modifications:
+    - target: {fileID: 4647490070542593086, guid: 052789b5c964f024f97f662b2b3bc441,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.241
+      objectReference: {fileID: 0}
     - target: {fileID: 4647490070542593085, guid: 052789b5c964f024f97f662b2b3bc441,
         type: 3}
       propertyPath: m_Name
@@ -11220,11 +11225,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647490070542593086, guid: 052789b5c964f024f97f662b2b3bc441,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.241
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052789b5c964f024f97f662b2b3bc441, type: 3}
@@ -17449,6 +17449,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.043205764
       objectReference: {fileID: 0}
+    - target: {fileID: 1652061083727996194, guid: d83ee4ae11f679d46a161d24cc0a5e77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4574267519669834442, guid: d83ee4ae11f679d46a161d24cc0a5e77,
         type: 3}
       propertyPath: maxEnergy
@@ -17469,11 +17474,6 @@ PrefabInstance:
       propertyPath: Blockdead
       value: 
       objectReference: {fileID: 758422968}
-    - target: {fileID: 1652061083727996194, guid: d83ee4ae11f679d46a161d24cc0a5e77,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83ee4ae11f679d46a161d24cc0a5e77, type: 3}
 --- !u!1 &641690707
@@ -18363,12 +18363,12 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -18397,13 +18397,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817694650}
-  m_LocalRotation: {x: 0.23013881, y: -0.2513656, z: 0.06166548, w: 0.93810916}
+  m_LocalRotation: {x: -0.36751363, y: -0.6040975, z: 0.36751363, w: -0.6040975}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 27.567001, y: -30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 62.63, y: -270, z: 0}
 --- !u!1001 &840439910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24927,8 +24927,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 6.77
+  orthographic: 1
+  orthographic size: 7.34
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -24951,13 +24951,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230509608}
-  m_LocalRotation: {x: 0.3215022, y: -0.005692977, z: -0.0063719563, w: 0.94687027}
-  m_LocalPosition: {x: 0.68, y: 10.18, z: -24.5}
+  m_LocalRotation: {x: 0.2738147, y: 0.36549014, z: -0.11341776, w: 0.88237125}
+  m_LocalPosition: {x: -5.79, y: 6.08, z: -20.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 37.501003, y: -1.075, z: -1.136}
+  m_LocalEulerAnglesHint: {x: 34.48, y: 45, z: 0}
 --- !u!4 &1234032937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7746101377122057404, guid: d83ee4ae11f679d46a161d24cc0a5e77,
@@ -25002,6 +25002,7 @@ MonoBehaviour:
   gameOver: 0
   text: {fileID: 1676075425}
   youwin: {fileID: 1429787433}
+  backTrack: {fileID: 527411502}
 --- !u!4 &1288353749
 Transform:
   m_ObjectHideFlags: 0
@@ -30786,13 +30787,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f147fc9846f4f3146b0700ee2b628a54, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.69
+  m_Volume: 0.792
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 55
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -46718,7 +46719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.050980393, g: 0.078431375, b: 0.30980393, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -46798,7 +46799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.05139729, g: 0.07833231, b: 0.31132078, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -11,6 +11,7 @@ public class GameOverScipt : MonoBehaviour
     public Text text;
     
     public AudioSource youwin;
+    public AudioSource backTrack;
     private bool playingSfx;
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class GameOverScipt : MonoBehaviour
         if (gameOver && playingSfx == false)
         {
             youwin.Play();
+            backTrack.Stop();
             playingSfx = true;
         }
         
@@ -38,7 +40,7 @@ public class GameOverScipt : MonoBehaviour
     {
         if (!gameOver) {
             gameOver = true;
-            text.text = "Player 1 has won. Press RB to restart.";
+            text.text = "Player 1 has won. Press R1 to restart.";
         }
     }
 
@@ -47,7 +49,7 @@ public class GameOverScipt : MonoBehaviour
         if (!gameOver)
         {
             gameOver = true;
-            text.text = "Player 2 has won. Press RB to restart.";
+            text.text = "Player 2 has won. Press R1 to restart.";
         }
     }
 }
