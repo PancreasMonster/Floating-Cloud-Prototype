@@ -259,7 +259,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 7
+    axis: 6
     joyNum: 2
   - serializedVersion: 3
     m_Name: Dpad2x
@@ -275,7 +275,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 7
+    axis: 6
     joyNum: 1
   - serializedVersion: 3
     m_Name: BiggerBenjamin
@@ -289,9 +289,9 @@ InputManager:
     dead: 0.001
     sensitivity: 1000
     snap: 0
-    invert: 1
+    invert: 0
     type: 2
-    axis: 6
+    axis: 7
     joyNum: 2
   - serializedVersion: 3
     m_Name: Dpad2y
@@ -305,9 +305,9 @@ InputManager:
     dead: 0.001
     sensitivity: 1000
     snap: 0
-    invert: 1
+    invert: 0
     type: 2
-    axis: 6
+    axis: 7
     joyNum: 1
   - serializedVersion: 3
     m_Name: ControllerX
@@ -321,9 +321,9 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 0
-    invert: 1
+    invert: 0
     type: 2
-    axis: 5
+    axis: 2
     joyNum: 2
   - serializedVersion: 3
     m_Name: Controller2X
@@ -337,9 +337,9 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 0
-    invert: 1
+    invert: 0
     type: 2
-    axis: 5
+    axis: 2
     joyNum: 1
   - serializedVersion: 3
     m_Name: ControllerY
@@ -355,7 +355,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 2
+    axis: 5
     joyNum: 2
   - serializedVersion: 3
     m_Name: Controller2Y
@@ -371,7 +371,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 2
+    axis: 5
     joyNum: 1
   - serializedVersion: 3
     m_Name: XboxRB
